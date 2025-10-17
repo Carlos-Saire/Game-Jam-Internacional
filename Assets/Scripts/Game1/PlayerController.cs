@@ -7,6 +7,8 @@ namespace Game1
         private Rigidbody2D rb;
         private float horizontal;
         [SerializeField] private float speed;
+        private ParticleSystem particleSyste;
+
         private void Reset()
         {
             rb = GetComponent<Rigidbody2D>();
@@ -16,26 +18,38 @@ namespace Game1
         {
             base.OnEnable();
             InputHandler.OnMoveHorizontal += Horizontal;
+            RayController.OnSpeed += UpdateSpeed;
         }
         protected override void OnDisable()
         {
             base.OnDisable();
             InputHandler.OnMoveHorizontal -= Horizontal;
+            RayController.OnSpeed -= UpdateSpeed;
         }
         private void Awake()
         {
             rb = GetComponent<Rigidbody2D>();
-        }
-        private void Horizontal(float horizontal)
-        {
-            this.horizontal = horizontal;
+            particleSyste = gameObject.GetComponent<ParticleSystem>();
         }
 
         private void FixedUpdate()
         {
             if (!isStartGame) return;
 
-            rb.linearVelocity=new Vector2 (horizontal*speed,rb.linearVelocity.y) ;
+            rb.linearVelocity = new Vector2(horizontal * speed, rb.linearVelocity.y);
         }
+        private void Horizontal(float horizontal)
+        {
+            this.horizontal = horizontal;
+        }
+        private void OnTriggerEnter2D(Collider2D collision)
+        {
+            particleSyste.Play();
+        }
+        private void UpdateSpeed(float speed)
+        {
+            this.speed += speed;
+        }
+
     }
 }

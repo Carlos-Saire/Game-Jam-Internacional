@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: f2cc988ae529f4541adc590120e389a0
+guid: cc2d16fd2e06ad34c93824c2aa761568
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2110492075751625171
-    second: Caramelo3_0
+      213: -2084151089133379091
+    second: Pixel-Art-Star-5-removebg-preview_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Caramelo3_0
+      name: Pixel-Art-Star-5-removebg-preview_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 168
-        height: 199
+        x: 73
+        y: 73
+        width: 352
+        height: 352
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d2e2c8393a606b2e0800000000000000
-      internalID: -2110492075751625171
+      spriteID: de126f170ab9313e0800000000000000
+      internalID: -2084151089133379091
       vertices: []
       indices: 
       edges: []
@@ -160,8 +160,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Caramelo3_0: -2110492075751625171
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
