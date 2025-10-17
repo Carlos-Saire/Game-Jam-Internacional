@@ -1,7 +1,8 @@
+using System;
 using UnityEngine;
-
 public class GameManager : MonoBehaviour
 {
+    public static event Action OnGameStarted;
     public static GameManager instance;
 
     [Header("")]
@@ -49,8 +50,8 @@ public class GameManager : MonoBehaviour
         CountSweet = PlayerPrefs.GetInt("countSweet", 0);
         CurrentMaxLevel = PlayerPrefs.GetInt("currentMaxLevel", 1);
     }
-    
-
-
-
+    public void StartGame()
+    {
+        OnGameStarted?.Invoke();
+    }
 }
