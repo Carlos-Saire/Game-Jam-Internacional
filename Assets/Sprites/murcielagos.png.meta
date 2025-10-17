@@ -285,7 +285,13 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      murcielagos_0: -3736621514160478772
+      murcielagos_1: 6995809259467298509
+      murcielagos_2: -333241965395919240
+      murcielagos_3: -7032071666240764327
+      murcielagos_4: -8733526502243414190
+      murcielagos_5: 3699412739155398060
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

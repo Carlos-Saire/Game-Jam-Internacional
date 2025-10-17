@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      MaloCaramelo2_0: 4085019298869477285
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
