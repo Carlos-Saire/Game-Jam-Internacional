@@ -10,6 +10,9 @@ public class DialogueController : MonoBehaviour
     [SerializeField] private float typingSpeed;
     [SerializeField] private float waitAfterLine;
     [SerializeField] private TMP_Text text;
+
+    [Header("AudiosDialogues")]
+    [SerializeField] private AudioSource[] audiosDialogues; 
     private void Reset()
     {
         typingSpeed = 0.08f;
@@ -24,7 +27,10 @@ public class DialogueController : MonoBehaviour
         for (int i = 0; i < dialogues.Length; ++i)
         {
             text.text = "";
-
+            if (i < audiosDialogues.Length && audiosDialogues[i] != null)
+            {
+                audiosDialogues[i].Play();
+            }
             for (int j = 0; j < dialogues[i].Length; ++j)
             {
                 text.text += dialogues[i][j];

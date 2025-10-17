@@ -371,6 +371,7 @@ MonoBehaviour:
   typingSpeed: 0.08
   waitAfterLine: 1.2
   text: {fileID: 1454762043}
+  audiosDialogues: []
 --- !u!4 &718621895
 Transform:
   m_ObjectHideFlags: 0

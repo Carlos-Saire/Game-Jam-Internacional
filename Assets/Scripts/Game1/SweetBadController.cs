@@ -45,6 +45,11 @@ namespace Game1
         {
             rotationSequence.Kill();
         }
+        protected override void CollisionPlayer()
+        {
+            ActiveEventIncrmentScore();
+            base.CollisionPlayer();
+        }
     }
 }
 

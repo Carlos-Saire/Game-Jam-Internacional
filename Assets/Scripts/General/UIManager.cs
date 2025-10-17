@@ -14,6 +14,16 @@ public class UIManager : MonoBehaviour
     [Header("LoadSceneManager")]
     [SerializeField] private SceneManagerController loadSceneManager;
     [SerializeField] private string scene;
+
+    private Tweener tweener; 
+    private void OnEnable()
+    {
+        GameManager.OnGameWin += CheckWin;
+    }
+    private void OnDisable()
+    {
+        GameManager.OnGameWin -= CheckWin;
+    }
     private void Start()
     {
         if (introduccion == null)
@@ -25,13 +35,30 @@ public class UIManager : MonoBehaviour
             introduccion.GoDialogue(Fade);
         }
     }
+    private void OnDestroy()
+    {
+        tweener.Kill();
+    }
     private void Fade()
     {
-        Tweener fadeTween = canvasGroupDialogue.DOFade(0, 1);
-        fadeTween.OnComplete(() => GameManager.instance.StartGame());
+        tweener = canvasGroupDialogue.DOFade(0, 1);
+        tweener.OnComplete(() => GameManager.instance.StartGame());
     }
     private void Explain()
     {
         loadSceneManager.LoadScene(scene);
+    }
+    private void CheckWin(bool value)
+    {
+        if (value)
+        {
+            tweener = canvasGroupDialogue.DOFade(1, 0);
+            win.GoDialogue();
+        }
+        else
+        {
+            tweener = canvasGroupDialogue.DOFade(1, 0);
+            fail.GoDialogue();
+        }
     }
 }

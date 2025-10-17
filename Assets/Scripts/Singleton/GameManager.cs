@@ -4,18 +4,28 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static event Action OnGameStarted;
+    public static event Action<bool> OnGameWin;
     public static GameManager instance;
 
     [Header("")]
     public int CountSweet { get; private set; }
     public int CurrentMaxLevel { get; private set; }
+
+    [Header("Score")]
+    [SerializeField] private ScoreSO score;
+
+    [Header("Game1")]
+    [SerializeField] private int scoreToWin;
+
     private void OnEnable()
     {
         TimerController.OnGameSpeedIncreased += SetGameSpeed;
+        TimerController.OnGameFinish += FinishedGame1;
     }
     private void OnDisable()
     {
         TimerController.OnGameSpeedIncreased -= SetGameSpeed;
+        TimerController.OnGameFinish -= FinishedGame1;
     }
     private void Awake()
     {
@@ -65,6 +75,18 @@ public class GameManager : MonoBehaviour
     public void StartGame()
     {
         OnGameStarted?.Invoke();
+        score.Score = 0;
     }
-
+    private void FinishedGame1()
+    {
+        Time.timeScale = 0;
+        if (scoreToWin<=score.Score)
+        {
+            OnGameWin?.Invoke(true);
+        }
+        else
+        {
+            OnGameWin?.Invoke(false);
+        }
+    }
 }
