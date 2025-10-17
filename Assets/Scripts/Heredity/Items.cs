@@ -1,0 +1,47 @@
+using UnityEngine;
+namespace Game1
+{
+    [RequireComponent (typeof (Rigidbody2D))]
+    [RequireComponent (typeof (BoxCollider2D))]
+    public abstract class Items : MonoBehaviour
+    {
+        private Rigidbody2D rb;
+        [SerializeField] private float speed;
+        [Header("Audio")]
+        [SerializeField] private AudioClipSO audioClipSO;
+        private void Reset()
+        {
+            rb = GetComponent<Rigidbody2D>();
+            GetComponent<Collider2D>().isTrigger = true;
+            rb.gravityScale = 0;
+        }
+        private void Awake()
+        {
+            rb = GetComponent<Rigidbody2D>();
+        }
+        protected virtual void Update()
+        {
+            if (transform.position.y <= -6.1f)
+            {
+                Destroy(gameObject);
+            }
+        }
+        protected virtual void FixedUpdate()
+        {
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, -speed);
+        }
+        protected virtual void OnTriggerEnter2D(Collider2D collision)
+        {
+            if (collision.CompareTag("Player"))
+            {
+                CollisionPlayer();
+            }
+        }
+        protected virtual void CollisionPlayer()
+        {
+            audioClipSO.PlayOneShoot();
+            Destroy(gameObject);
+        }
+    }
+}
+

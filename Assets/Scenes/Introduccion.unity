@@ -131,6 +131,7 @@ GameObject:
   - component: {fileID: 100391342}
   - component: {fileID: 100391341}
   - component: {fileID: 100391340}
+  - component: {fileID: 100391344}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -195,7 +196,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_VertexColorAlwaysGammaSpace: 0
+  m_VertexColorAlwaysGammaSpace: 1
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
@@ -221,6 +222,25 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &100391344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100391339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6614b47b66eae7e428d9e985816d0fec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvasGroupDialogue: {fileID: 0}
+  history: {fileID: 718621894}
+  introduccion: {fileID: 0}
+  win: {fileID: 0}
+  fail: {fileID: 0}
+  loadSceneManager: {fileID: -3519015995678718549, guid: c00ac7137bf33d1469a24be130ea303a, type: 3}
+  scene: Game1
 --- !u!1 &671660670
 GameObject:
   m_ObjectHideFlags: 0
@@ -343,10 +363,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogues:
-  - asdasdasd
-  - asdasdasdas
-  - dasdas
-  - gasgasg
+  - "Bienvenido, peque\xF1o mortal... a HouseLand, la casa donde los dulces no se
+    regalan\u2026 \xA1se ganan!"
+  - "Aqu\xED nada es lo que parece. Supera mis pruebas, re\xFAne los caramelos\u2026
+    y tal vez, solo tal vez, salgas de aqu\xED antes de la medianoche."
+  - "Que empiece el juego\u2026 humano."
   typingSpeed: 0.08
   waitAfterLine: 1.2
   text: {fileID: 1454762043}
