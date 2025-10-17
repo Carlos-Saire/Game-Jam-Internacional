@@ -1,4 +1,5 @@
 using System;
+using Game1;
 using UnityEngine;
 public class GameManager : MonoBehaviour
 {
@@ -10,11 +11,11 @@ public class GameManager : MonoBehaviour
     public int CurrentMaxLevel { get; private set; }
     private void OnEnable()
     {
-
+        TimerController.OnGameSpeedIncreased += SetGameSpeed;
     }
     private void OnDisable()
     {
-
+        TimerController.OnGameSpeedIncreased -= SetGameSpeed;
     }
     private void Awake()
     {
@@ -33,6 +34,17 @@ public class GameManager : MonoBehaviour
     private void OnApplicationQuit()
     {
         SaveData();
+    }
+    private void SetGameSpeed(bool isFast)
+    {
+        if (isFast)
+        {
+            Time.timeScale = 2f;
+        }
+        else
+        {
+            Time.timeScale = 1f;
+        }
     }
     public void CompleteLevel()
     {
@@ -54,4 +66,5 @@ public class GameManager : MonoBehaviour
     {
         OnGameStarted?.Invoke();
     }
+
 }

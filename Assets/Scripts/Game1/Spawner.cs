@@ -6,15 +6,21 @@ namespace Game1
 {
     public class Spawner : StartableEntity
     {
-        [Header("Objects")]
-        [SerializeField] private Transform objecta;
+        [Header("Spawnable Prefabs")]
+        [SerializeField] private Transform[] goodObjects; 
+        [SerializeField] private Transform[] badObjects; 
 
-        [Header("Spawn Limits")]
+        [Header("Spawn Settings")]
         [SerializeField] private Vector2 xLimit;
+        [SerializeField] private float spawnInterval = 2f;
+        [SerializeField, Range(0f, 1f)] private float badObjectChance = 0.3f; 
+
+        [Header("Position Control")]
+        [SerializeField] private int maxStoredPositions = 3;
+        [SerializeField] private float minDistance = 0.5f;
 
         private List<Vector2> recentPositions = new List<Vector2>();
-        private const int maxStoredPositions = 3;
-        private const float minDistance = 0.5f; 
+        private bool firstSpawnDone = false;
 
         protected override void StartGame()
         {
@@ -24,8 +30,26 @@ namespace Game1
 
         private void Generate()
         {
-            Instantiate(objecta, GetRandomPosition(), transform.rotation);
-            Invoke(nameof(Generate), 2f);
+            Transform prefabToSpawn = GetRandomPrefab();
+            Instantiate(prefabToSpawn, GetRandomPosition(), transform.rotation);
+
+            Invoke("Generate", spawnInterval);
+        }
+
+        private Transform GetRandomPrefab()
+        {
+            if (!firstSpawnDone)
+            {
+                firstSpawnDone = true;
+                return goodObjects[Random.Range(0, goodObjects.Length)];
+            }
+
+            bool spawnBad = Random.value < badObjectChance;
+
+            if (spawnBad && badObjects.Length > 0)
+                return badObjects[Random.Range(0, badObjects.Length)];
+
+            return goodObjects[Random.Range(0, goodObjects.Length)];
         }
 
         private Vector2 GetRandomPosition()
@@ -53,9 +77,9 @@ namespace Game1
 
         private bool IsTooClose(Vector2 newPos)
         {
-            for (int i = 0; i < recentPositions.Count; i++)
+            foreach (var pos in recentPositions)
             {
-                if (Vector2.Distance(recentPositions[i], newPos) < minDistance)
+                if (Vector2.Distance(pos, newPos) < minDistance)
                     return true;
             }
             return false;

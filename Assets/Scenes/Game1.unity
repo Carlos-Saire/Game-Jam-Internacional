@@ -192,8 +192,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdd638f0e01f90441b166fb1a6d39a74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objecta: {fileID: 8913549467563818172, guid: 9e581e1b319e2724fb0bf03d414a5284, type: 3}
+  goodObjects:
+  - {fileID: 7338623257433315752, guid: 730df6a3a2167794c88f4c64f9eba4c6, type: 3}
+  - {fileID: 4785441987207458751, guid: eb7eb796e2cb16f45bad1225562cfe71, type: 3}
+  - {fileID: 8546864054435333773, guid: c03436cbfdc660d42bde509684d4e6be, type: 3}
+  - {fileID: 7444616343887289079, guid: fbccc304b13e9d6428a4d2273f62fe2f, type: 3}
+  - {fileID: 8913549467563818172, guid: 9e581e1b319e2724fb0bf03d414a5284, type: 3}
+  - {fileID: 7537779123476154039, guid: a7d46b93b04820449a00421b44d23a4d, type: 3}
+  - {fileID: 7537779123476154039, guid: a7d46b93b04820449a00421b44d23a4d, type: 3}
+  badObjects:
+  - {fileID: 3681655724920853113, guid: 6a77a774d18bb9046859b19083939eff, type: 3}
+  - {fileID: 6454116590948348958, guid: f5f6534a73e3dee4ca5e3abf18af5ca9, type: 3}
   xLimit: {x: -8, y: 8}
+  spawnInterval: 1
+  badObjectChance: 0.3
+  maxStoredPositions: 3
+  minDistance: 0.5
 --- !u!4 &505741253
 Transform:
   m_ObjectHideFlags: 0
@@ -811,6 +825,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4
+  xLimit: {x: -8, y: 8}
 --- !u!50 &825463997
 Rigidbody2D:
   serializedVersion: 5
@@ -6299,9 +6314,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvasGroupDialogue: {fileID: 1014799870}
+  history: {fileID: 0}
   introduccion: {fileID: 1632063574}
   win: {fileID: 0}
   fail: {fileID: 0}
+  loadSceneManager: {fileID: 0}
+  scene: 
 --- !u!1 &1970765915
 GameObject:
   m_ObjectHideFlags: 0
@@ -6521,10 +6539,10 @@ SceneRoots:
   - {fileID: 2143143021}
   - {fileID: 697007198}
   - {fileID: 640063231}
-  - {fileID: 1632063575}
   - {fileID: 1955695413}
   - {fileID: 665523877}
   - {fileID: 54246122}
   - {fileID: 825463995}
   - {fileID: 1798299723}
   - {fileID: 505741253}
+  - {fileID: 1632063575}
