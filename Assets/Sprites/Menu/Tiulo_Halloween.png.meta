@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Tiulo_Halloween_0: 5213062315646534641
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

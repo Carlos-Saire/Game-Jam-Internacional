@@ -5,6 +5,12 @@ TagManager:
   serializedVersion: 3
   tags:
   - Good
+  - Enemy1
+  - Enemy2
+  - Node
+  - Calabaza
+  - Candy
+  - Ghost
   layers:
   - Default
   - TransparentFX

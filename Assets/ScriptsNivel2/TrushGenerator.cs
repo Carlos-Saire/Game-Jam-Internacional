@@ -14,33 +14,22 @@ public class TrushGenerator : MonoBehaviour
     [SerializeField] int MinNumberInitialTrush, MaxNumberInitialTrush;
     [SerializeField] Vector2 PositionIntial;
     [SerializeField] Vector2 separation;
-    [SerializeField] Slider sliderContamination;
-    public static event Action OnTopContamination;
-    public static event Action OnBottomContamination;
+
+    private int candiesCreated = 0;
+   
 
     public SimpleLinkList<GameObject> listTrush = new SimpleLinkList<GameObject>();
 
-    private void Awake()
-    {
-        sliderContamination.GetComponent<Slider>();
-    }
+    public static event Action<int> OnCreatedCandiesInitials;
 
     private void Start()
     {
         OnDrawMap();
     }
 
-    private void OnEnable()
-    {
-        EnemyController.OnCreateTrush += AddTrushAtSlider;
-        playerController.OnDestroyTrush += DeleteTrushAtSlider;
-    }
+ 
 
-    private void OnDisable()
-    {
-        EnemyController.OnCreateTrush -= AddTrushAtSlider;
-        playerController.OnDestroyTrush -= DeleteTrushAtSlider;
-    }
+  
     void OnDrawMap()
     {
 
@@ -65,7 +54,7 @@ public class TrushGenerator : MonoBehaviour
                         currentMapPart = Instantiate(trushPrefab, new Vector2(PositionIntial.x + j * separation.x,
                         PositionIntial.y - i * separation.y), transform.rotation);
                         listTrush.AddAtEnd(currentMapPart);
-                        sliderContamination.value++;
+                        candiesCreated++;
                         aux++;
                         currentMapPart.transform.SetParent(this.transform);
                     }
@@ -76,28 +65,9 @@ public class TrushGenerator : MonoBehaviour
             }
         }
 
-
+        OnCreatedCandiesInitials?.Invoke(candiesCreated);
 
 
     }
 
-
-    void AddTrushAtSlider()
-    {
-        sliderContamination.value++;
-        if (sliderContamination.value == sliderContamination.maxValue)
-        {
-            OnTopContamination?.Invoke();
-        }
-    }
-
-
-    void DeleteTrushAtSlider()
-    {
-        sliderContamination.value--;
-        if (sliderContamination.value == sliderContamination.minValue)
-        {
-            OnBottomContamination?.Invoke();
-        }
-    }
 }

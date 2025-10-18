@@ -11,26 +11,26 @@ public class StateManagerController : MonoBehaviour
 
     private void OnEnable()
     {
-        TrushGenerator.OnTopContamination += Lose;
-        TrushGenerator.OnBottomContamination += Win;
+        SliderUI.OnBarFull += Lose;
+        SliderUI.OnBarEmpty += Win;
     }
 
     private void OnDisable()
     {
-        TrushGenerator.OnTopContamination -= Lose;
-        TrushGenerator.OnBottomContamination -= Win;
+        SliderUI.OnBarFull -= Lose;
+        SliderUI.OnBarEmpty -= Win;
     }
 
     void Win()
     {
         Time.timeScale = 0.0f;
-        panelWin.SetActive(true);
+ 
     }
 
     void Lose()
     {
         Time.timeScale = 0.0f;
-        panelLose.SetActive(true);
+
     }
 }
 
