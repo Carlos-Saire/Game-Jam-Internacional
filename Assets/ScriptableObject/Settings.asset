@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96a61f8adf076ce439b3f01721c337f8, type: 3}
+  m_Name: Settings
+  m_EditorClassIdentifier: 
+  mainMixer: {fileID: 24100000, guid: b385de21a38f3e546b6dbe97da80e69c, type: 2}
+  masterKey: master
+  musicKey: music
+  sfxKey: sfx
+  masterVolume: 1
+  musicVolume: 1
+  sfxVolume: 1

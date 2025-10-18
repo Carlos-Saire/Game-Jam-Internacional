@@ -55,6 +55,7 @@ public class MenuManager : MonoBehaviour
     private void OnDestroy()
     {
         tween.Kill();
+        tweenEffet.Kill();
     }
     private void DeletePlayerPrefs()
     {
@@ -76,7 +77,7 @@ public class MenuManager : MonoBehaviour
     }
     private IEnumerator EffectSun()
     {
-        while (ligh2D.intensity <= 4)
+        while (ligh2D.intensity <= 2)
         {
             ligh2D.intensity+= timeEffettSun*Time.deltaTime;
             yield return null;
