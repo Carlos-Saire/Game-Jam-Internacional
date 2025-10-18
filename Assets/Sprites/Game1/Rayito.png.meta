@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Rayito_0: -7120671187961704781
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

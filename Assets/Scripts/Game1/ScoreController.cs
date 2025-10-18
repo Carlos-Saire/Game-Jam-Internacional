@@ -14,7 +14,7 @@ namespace Game1
         private void Start()
         {
             currentScore = 0;
-            text.text = "" + currentScore;
+            text.text = "Puntos: " + currentScore;
         }
         [SerializeField] private ScoreSO score;
         private void OnEnable()
@@ -28,7 +28,7 @@ namespace Game1
         private void UpdateScore(int score)
         {
             currentScore += score;
-            text.text = "" + currentScore;
+            text.text = "Puntos: " + currentScore;
             this.score.Score = currentScore;
         }
     }

@@ -30,14 +30,14 @@ namespace Game1
         private void Start()
         {
             currentTime = initTime;
-            text.text = "" + (int)currentTime;
+            text.text = "Tiempo: " + (int)currentTime;
         }
         private void Update()
         {
             if (!isStartGame || isFinish) return;
 
             currentTime -= Time.deltaTime;
-            text.text = ((int)currentTime).ToString();
+            text.text = "Tiempo: " +((int)currentTime).ToString();
 
             if (!isGameFast && currentTime <= 10 && currentTime > 0)
             {

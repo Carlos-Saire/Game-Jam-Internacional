@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      CalabazaNeutro_0: -9100105516475449204
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
