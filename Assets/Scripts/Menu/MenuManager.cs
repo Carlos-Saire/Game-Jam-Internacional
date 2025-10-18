@@ -1,8 +1,10 @@
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 using DG.Tweening;
 using UnityEngine.Rendering.Universal;
 using System.Collections;
+using UnityEditor.ShaderGraph.Internal;
 public class MenuManager : MonoBehaviour
 {
     [Header("Buttons")]
@@ -38,6 +40,9 @@ public class MenuManager : MonoBehaviour
     [SerializeField] private Image image;
     [SerializeField] private float timeEffectFade;
 
+    [Header("Events")]
+    [SerializeField] private UnityEvent OnPlay;
+
     private void OnEnable()
     {
         buttonPlay.onClick.AddListener(DeletePlayerPrefs);
@@ -61,6 +66,7 @@ public class MenuManager : MonoBehaviour
     {
         PlayerPrefs.DeleteAll();
         audioSource.Play();
+        OnPlay?.Invoke();
         StartCoroutine(EffectSun());
     }
     private void MoveTitle()

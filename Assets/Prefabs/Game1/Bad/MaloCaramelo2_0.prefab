@@ -177,7 +177,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4
-  audioClipSO: {fileID: 11400000, guid: eecc5b2b873125b4d9b267f6a51db34f, type: 2}
+  audioClipSO: {fileID: 11400000, guid: 9dd2d0e3da7ee40458a95ab972b1c546, type: 2}
   incrementScore: -10
   rotationSpeed: 1
   rotationRange: {x: -10, y: 20}

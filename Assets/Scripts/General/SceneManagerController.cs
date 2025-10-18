@@ -11,7 +11,7 @@ public class SceneManagerController : MonoBehaviour
     {
         LoadScene(games[GameManager.instance.CurrentMaxLevel-1]);
     }
-    public void ReLoad()
+    public void Reboot()
     {
         LoadScene(SceneManager.GetActiveScene().name);
     }

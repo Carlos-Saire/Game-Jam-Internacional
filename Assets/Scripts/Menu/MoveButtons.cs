@@ -26,12 +26,14 @@ public class MoveButtons : MonoBehaviour
     {
         tween = rectTransform.DORotate(new Vector3(0, 0, rotationRange.y), rotationSpeed,RotateMode.Fast);
         tween.SetEase(Ease.Linear);
+        tween.SetUpdate(true);
         tween.OnComplete(MoveRight);
     }
     private void MoveRight()
     {
         tween = rectTransform.DORotate(new Vector3(0, 0, rotationRange.x), rotationSpeed, RotateMode.Fast);
         tween.SetEase(Ease.Linear);
+        tween.SetUpdate(true);
         tween.OnComplete(MoveLeft);
     }
 }

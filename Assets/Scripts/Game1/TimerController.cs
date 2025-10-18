@@ -34,30 +34,28 @@ namespace Game1
         }
         private void Update()
         {
-            if (!isStartGame) return;
+            if (!isStartGame || isFinish) return;
+
             currentTime -= Time.deltaTime;
-            text.text = "" + (int)currentTime;
+            text.text = ((int)currentTime).ToString();
 
-            if (!isFinish)
+            if (!isGameFast && currentTime <= 10 && currentTime > 0)
             {
-                if (currentTime <= 0)
-                {
-                    isFinish = true;
-                    OnGameFinish?.Invoke();
-
-                }
-                else if (currentTime <= 10 && !isGameFast)
-                {
-                    isGameFast = true;
-                    OnGameSpeedIncreased?.Invoke(isGameFast);
-                }
-                else
-                {
-                    isGameFast = false;
-                    OnGameSpeedIncreased?.Invoke(isGameFast);
-                }
+                isGameFast = true;
+                OnGameSpeedIncreased?.Invoke(true);
             }
-           
+            else if(isGameFast && currentTime >= 10 && currentTime > 0)
+            {
+                isGameFast = false;
+                OnGameSpeedIncreased?.Invoke(false);
+            }
+            else if (currentTime <= 0)
+            {
+                isFinish = true;
+                currentTime = 0;
+                text.text = "0";
+                OnGameFinish?.Invoke();
+            }
         }
         private void UpdateTime(float time)
         {
