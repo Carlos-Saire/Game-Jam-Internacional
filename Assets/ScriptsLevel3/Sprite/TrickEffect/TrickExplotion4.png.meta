@@ -1,10 +1,22 @@
 fileFormatVersion: 2
-guid: 232a9ea6fb998e143b5dd2d26cf2241c
+guid: cd141725d2ba39f45b5b2075b631d2b4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8136052256282197323
-    second: Pumpkin2_0
+      213: 525437965932070148
+    second: TrickExplotion4_0
+  - first:
+      213: 5158596298162314728
+    second: TrickExplotion4_1
+  - first:
+      213: -7453752778028628294
+    second: TrickExplotion4_2
+  - first:
+      213: -3839715288241262343
+    second: TrickExplotion4_3
+  - first:
+      213: 2026961059923904393
+    second: TrickExplotion4_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +58,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -109,30 +121,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Pumpkin2_0
+      name: TrickExplotion4_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 284
-        height: 257
+        x: 52
+        y: 90
+        width: 74
+        height: 103
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +140,96 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b4d37b1ab6019e070800000000000000
-      internalID: 8136052256282197323
+      spriteID: 40582eecb0bba4700800000000000000
+      internalID: 525437965932070148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrickExplotion4_1
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 172
+        width: 28
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ed1c937004079740800000000000000
+      internalID: 5158596298162314728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrickExplotion4_2
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 93
+        width: 68
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab6c50e0753fe8890800000000000000
+      internalID: -7453752778028628294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrickExplotion4_3
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 112
+        width: 14
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f03ebdf94796bac0800000000000000
+      internalID: -3839715288241262343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrickExplotion4_4
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 76
+        width: 32
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 987405e3856312c10800000000000000
+      internalID: 2026961059923904393
       vertices: []
       indices: 
       edges: []
@@ -151,7 +238,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -161,7 +248,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Pumpkin2_0: 8136052256282197323
+      TrickExplotion4_0: 525437965932070148
+      TrickExplotion4_1: 5158596298162314728
+      TrickExplotion4_2: -7453752778028628294
+      TrickExplotion4_3: -3839715288241262343
+      TrickExplotion4_4: 2026961059923904393
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

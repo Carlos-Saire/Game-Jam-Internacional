@@ -44,7 +44,7 @@ namespace Game1
         }
         protected virtual void CollisionPlayer()
         {
-            audioClipSO.PlayOneShoot();
+            audioClipSO.SetPitch();
             Destroy(gameObject);
         }
         protected void ActiveEventIncrmentScore()

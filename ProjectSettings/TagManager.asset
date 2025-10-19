@@ -3,16 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags:
-  - Good
-  - Enemy1
-  - Enemy2
-  - Node
-  - Calabaza
-  - Candy
-  - Ghost
-  - Vertical
-  - Horizontal
+  tags: []
   layers:
   - Default
   - TransparentFX
@@ -20,7 +11,7 @@ TagManager:
   - 
   - Water
   - UI
-  - Items
+  - 
   - 
   - 
   - 
