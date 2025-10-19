@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: TutorialGame1 Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: TutorialGame1
+  m_TableCollectionNameGuidString: 63cfc10d9d4b88346a6252f968e7d1dd
+  m_Entries:
+  - m_Id: 514834268160
+    m_Key: Movimiento
+    m_Metadata:
+      m_Items: []
+  - m_Id: 883823968256
+    m_Key: Recolecta caramelos
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1083946795008
+    m_Key: "- Rayo: Aumenta tu velocidad m\xE1xima"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1448545058816
+    m_Key: '- Evita los caramelos malos'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1591851843584
+    m_Key: '- Reloj: Aumenta el tiempo restante'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1736601468928
+    m_Key: 'CONTROLES:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2188319621120
+    m_Key: 'OBJETIVO:'
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 101930672491593878
+  references:
+    version: 2
+    RefIds:
+    - rid: 101930672491593878
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1760899245071

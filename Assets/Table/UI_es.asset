@@ -52,6 +52,22 @@ MonoBehaviour:
     m_Localized: "Espa\xF1ol"
     m_Metadata:
       m_Items: []
+  - m_Id: 41154670460928
+    m_Localized: Saltar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42036875198464
+    m_Localized: Regresar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42985551265792
+    m_Localized: Reiniciar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43750609092608
+    m_Localized: PAUSA
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

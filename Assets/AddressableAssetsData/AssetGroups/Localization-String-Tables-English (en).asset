@@ -15,8 +15,20 @@ MonoBehaviour:
   m_GroupName: Localization-String-Tables-English (en)
   m_GUID: edd85ef809b341144b1baf495cbefb1e
   m_SerializeEntries:
+  - m_GUID: 226143201a0adc54f86ffd0ae1c38f4c
+    m_Address: TutorialGame3_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: b1cfeec381633c84796216ecb7b8ca16
     m_Address: UI_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: dd8a5225218cd054d9e2db1644a01e55
+    m_Address: TutorialGame1_en
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-en

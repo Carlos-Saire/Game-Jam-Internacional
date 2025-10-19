@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: TutorialGame1_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: 63cfc10d9d4b88346a6252f968e7d1dd, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 514834268160
+    m_Localized: "Move = A-D /\u2190\u2192  "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 883823968256
+    m_Localized: "\r- Collect candy"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1083946795008
+    m_Localized: "\r- Thunder: Increases your top speed"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1448545058816
+    m_Localized: "\r- Avoid bad candies"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1591851843584
+    m_Localized: "\r- Clock: Increases the remaining time"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1736601468928
+    m_Localized: "\rCONTROLS:"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2188319621120
+    m_Localized: 'OBJETIVE:'
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

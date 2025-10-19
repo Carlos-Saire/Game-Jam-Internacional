@@ -50,6 +50,22 @@ MonoBehaviour:
     m_Localized: Spanish
     m_Metadata:
       m_Items: []
+  - m_Id: 41154670460928
+    m_Localized: Skip
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42036875198464
+    m_Localized: Back
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42985551265792
+    m_Localized: Reset
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43750609092608
+    m_Localized: PAUSE
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

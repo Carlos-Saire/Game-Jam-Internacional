@@ -156,6 +156,8 @@ MonoBehaviour:
   waitAfterLine: 1.2
   text: {fileID: 2437578759815715799}
   audiosDialogues: []
+  value: []
+  tablename: 
 --- !u!4 &308805520
 Transform:
   m_ObjectHideFlags: 0
@@ -207,6 +209,7 @@ MonoBehaviour:
   duration: 10
   zigzagSpeed: 1
   amplitude: 1
+  rotationRange: {x: -1, y: 1}
 --- !u!212 &329954949
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -497,6 +500,8 @@ MonoBehaviour:
   waitAfterLine: 1.2
   text: {fileID: 2437578759815715799}
   audiosDialogues: []
+  value: []
+  tablename: 
 --- !u!4 &1254630285
 Transform:
   m_ObjectHideFlags: 0
@@ -659,6 +664,8 @@ MonoBehaviour:
   waitAfterLine: 1.2
   text: {fileID: 2437578759815715799}
   audiosDialogues: []
+  value: []
+  tablename: 
 --- !u!4 &2121040040
 Transform:
   m_ObjectHideFlags: 0
@@ -725,6 +732,10 @@ PrefabInstance:
     - target: {fileID: 3825236216210243337, guid: a31e13fcdf7f22349b59843dfc9a75cb, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4682723529352451504, guid: a31e13fcdf7f22349b59843dfc9a75cb, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7469353017261984566, guid: a31e13fcdf7f22349b59843dfc9a75cb, type: 3}
       propertyPath: m_Pivot.x

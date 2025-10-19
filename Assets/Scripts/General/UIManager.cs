@@ -27,6 +27,8 @@ public class UIManager : MonoBehaviour
     [SerializeField] private Button buttonBackDoubt;
     [SerializeField] private Button buttonBackSettings;
 
+    [SerializeField] private Button buttonSkip;
+
     [Header("ButtonsReyCalabaza")]
     [SerializeField]private Button[] buttonsReboot;
 
@@ -75,6 +77,7 @@ public class UIManager : MonoBehaviour
             buttonBackDoubt.onClick.AddListener(OnClickBackDoubt);
             buttonBackPause.onClick.AddListener(OnClickBackPause);
             buttonBackSettings.onClick.AddListener(OnClickBackSettings);
+            buttonSkip.onClick.AddListener(Skip);
         }
     }
     private void OnDisable()
@@ -89,6 +92,7 @@ public class UIManager : MonoBehaviour
             buttonBackDoubt.onClick.RemoveListener(OnClickBackDoubt);
             buttonBackPause.onClick.RemoveListener(OnClickBackPause);
             buttonBackSettings.onClick.RemoveListener(OnClickBackSettings);
+            buttonSkip.onClick.RemoveListener(Skip);
         }
     }
     private void Start()
@@ -118,6 +122,11 @@ public class UIManager : MonoBehaviour
     {
         tweener.Kill();
     }
+    private void Skip()
+    {
+        introduccion.StopDialogue();
+        Fade();
+    }
     private void Fade()
     {
         tweener = canvasGroupDialogue.DOFade(0, 1);
@@ -126,6 +135,7 @@ public class UIManager : MonoBehaviour
     private void StartGame()
     {
         OnClickDoubt();
+        buttonSkip.gameObject.SetActive(false);
         canvasGroupDialogue.interactable = false;
         canvasGroupDialogue.blocksRaycasts = false;
     }
