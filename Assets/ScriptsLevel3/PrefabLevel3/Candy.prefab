@@ -153,6 +153,7 @@ MonoBehaviour:
   - {fileID: -6907593785124493968, guid: 985c60dbde07474458c837e293f20b1f, type: 3}
   - {fileID: -2110492075751625171, guid: 89c43dd03ef9dee42b9846cf9e940837, type: 3}
   - {fileID: 8225783750848254460, guid: 872789871befad14c9883315667492e5, type: 3}
+  audioClipSO: {fileID: 11400000, guid: eecc5b2b873125b4d9b267f6a51db34f, type: 2}
 --- !u!50 &197494619146851383
 Rigidbody2D:
   serializedVersion: 5
