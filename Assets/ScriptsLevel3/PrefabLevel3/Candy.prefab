@@ -30,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -5.5, y: 2.34, z: 0}
-  m_LocalScale: {x: 0.83206, y: 0.83206, z: 0.83206}
+  m_LocalScale: {x: 0.7585142, y: 0.7585142, z: 0.7585142}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -135,7 +135,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
+  m_EdgeRadius: 0.5
 --- !u!114 &3206100916945787080
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -148,6 +148,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b791a6b838568484b883143f7d7aac08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  candySprites:
+  - {fileID: 677028895570971634, guid: 2e387b1ab0ce49e4a8d58558bc996655, type: 3}
+  - {fileID: -6907593785124493968, guid: 985c60dbde07474458c837e293f20b1f, type: 3}
+  - {fileID: -2110492075751625171, guid: 89c43dd03ef9dee42b9846cf9e940837, type: 3}
+  - {fileID: 8225783750848254460, guid: 872789871befad14c9883315667492e5, type: 3}
 --- !u!50 &197494619146851383
 Rigidbody2D:
   serializedVersion: 5

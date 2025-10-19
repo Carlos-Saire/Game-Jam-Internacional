@@ -443,7 +443,7 @@ MonoBehaviour:
   scoreText: {fileID: 1994634146}
   lifeText: {fileID: 1479310096}
   timerText: {fileID: 1618932108}
-  totalCandies: 10
+  totalCandies: 20
   playerLives: 3
   gameTime: 60
   gameStarted: 1
