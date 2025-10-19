@@ -5,7 +5,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class EnemyController : StartableEntity
+public class EnemyController : StartableEntity,IAuditable
 {
     Rigidbody2D _compRigidbody2D;
     [SerializeField] float TimeFreeze;
@@ -13,6 +13,8 @@ public class EnemyController : StartableEntity
     [SerializeField] Vector2 FirstDestination;
     [SerializeField] Sprite ScarySprite;
     [SerializeField] Sprite NormalSprite;
+    [SerializeField] AudioClipSO scarySound;
+    [SerializeField] AudioClipSO startMovementSound;
     Vector2 PositionToMove;
     [SerializeField] Vector3 startPostition;
     [SerializeField] float speedMove;
@@ -25,6 +27,7 @@ public class EnemyController : StartableEntity
     private SpriteRenderer sprite;
     private bool isReturning = false;
     private bool hasReachedInitialPosition = false;
+    private bool hasPlayedStartSound = false;
 
     private void Awake()
     {
@@ -70,17 +73,24 @@ public class EnemyController : StartableEntity
             if (Vector2.Distance(transform.position, startPostition) < 0.01f)
             {
                 TimeFreeze -= Time.deltaTime;
-                GetComponent<BoxCollider2D>().enabled = false;
                 sprite.flipX = stateFlipInitial;
                 sprite.sprite = NormalSprite;
                 hasReachedInitialPosition = true;
+                hasPlayedStartSound = false; // Se reinicia para poder reproducir el sonido luego
             }
         }
         else if (TimeFreeze <= 0 && hasReachedInitialPosition)
         {
             isReturning = false;
             GetComponent<BoxCollider2D>().enabled = true;
+
+            if (!hasPlayedStartSound)
+            {
+                PlayMusic(startMovementSound);
+                hasPlayedStartSound = true;
+            }
         }
+
 
         if (!isReturning)
         {
@@ -103,7 +113,6 @@ public class EnemyController : StartableEntity
 
     public void SetNewPosition(Vector2 newPosition)
     {
-        // Flip sprite based on direction
         if (transform.position.x < newPosition.x)
             sprite.flipX = true;
         else if (transform.position.x > newPosition.x)
@@ -118,11 +127,23 @@ public class EnemyController : StartableEntity
         RaycastHit2D hit = Physics2D.Raycast(mousePos, Vector2.zero);
         if (hit.collider != null && hit.collider.CompareTag("Ghost"))
         {
-            TimeFreeze = MaxTimeFreeze;
-            sprite.sprite = ScarySprite;
-            hasReachedInitialPosition = false;
+            EnemyController ghost = hit.collider.GetComponent<EnemyController>();
+            if (ghost != null)
+            {
+                GetComponent<BoxCollider2D>().enabled = false;
+                ghost.TimeFreeze = ghost.MaxTimeFreeze;
+                ghost.sprite.sprite = ghost.ScarySprite;
+                ghost.hasReachedInitialPosition = false;
+                ghost.PlayMusic(scarySound);
+            }
         }
     }
+
+    public void PlayMusic(AudioClipSO audio) { 
+    
+    audio.PlayOneShoot();    
+    }
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
