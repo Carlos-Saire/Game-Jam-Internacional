@@ -6,6 +6,8 @@ namespace Game3
     {
         public static GameManagerLevel3 Instance;
 
+        public AudioSource backgroundMusic;
+
         [Header("UI")]
         public TextMeshProUGUI scoreText;
         public TextMeshProUGUI lifeText;
@@ -33,6 +35,8 @@ namespace Game3
             {
                 Destroy(gameObject);
             }
+
+            backgroundMusic = GetComponent<AudioSource>();
         }
         private void Start()
         {
@@ -91,6 +95,8 @@ namespace Game3
             // LLAMAS ACA AL TERMINAR LOS DIALOGOS DEL REY CALABAZA GameManagerLevel3.Instance.StartGame();
             gameStarted = true;
             remainingTime = gameTime;
+
+            backgroundMusic.Play();
             timerText.text = "Time: " + Mathf.Ceil(remainingTime);
             Debug.Log("JUEGO INICIA V:");
         }
@@ -99,6 +105,8 @@ namespace Game3
             if (gameEnded) return;
 
             gameEnded = true;
+
+            backgroundMusic.Stop();
 
             Debug.Log(win ? "GANASTE COMO YO EN LA VIDA" : "PERDISTE COMO HERNAN BARCOS PERDERA EN EL DOTA");
             // PONER CINEMATICA DE PERDER O Q WEBA
