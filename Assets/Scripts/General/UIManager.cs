@@ -27,6 +27,9 @@ public class UIManager : MonoBehaviour
     [SerializeField] private Button buttonBackDoubt;
     [SerializeField] private Button buttonBackSettings;
 
+    [Header("ButtonsReyCalabaza")]
+    [SerializeField]private Button[] buttonsReboot;
+
     [Header("Panel")]
     [SerializeField] private RectTransform panelSettings;
     [SerializeField] private RectTransform panelPause;
@@ -57,6 +60,8 @@ public class UIManager : MonoBehaviour
 
     [SerializeField] private UnityEvent OnStartGame;
     [SerializeField] private UnityEvent OnFinishGame;
+    [SerializeField] private UnityEvent OnWin;
+    [SerializeField] private UnityEvent OnFail;
     private void OnEnable()
     {
         GameManager.OnGameWin += CheckWin;
@@ -103,6 +108,7 @@ public class UIManager : MonoBehaviour
             initPositionPause = panelPause.position;
             initPositionDoubt = panelDoubt.position;
         }
+        CheckButtonReboot();
     }
     private void OnDestroy()
     {
@@ -133,10 +139,13 @@ public class UIManager : MonoBehaviour
         if (value)
         {
             win.GoDialogue();
+            GameManager.instance.CompleteLevel();
+            OnWin?.Invoke();
         }
         else
         {
             fail.GoDialogue();
+            OnFail?.Invoke();
         }
     }
     private void MovePanel(RectTransform rect, Vector2 position, Ease ease, float time, Action OnFinish = null)
@@ -170,6 +179,13 @@ public class UIManager : MonoBehaviour
     {
         isInteract = false;
     }
+    private void CheckButtonReboot()
+    {
+        for(int i = 0; i < buttonsReboot.Length; ++i)
+        {
+            buttonsReboot[i].interactable = GameManager.instance.CountSweet > 0;
+        }
+    }
     #region ButtonsListener
     private void OnClickPause() => MovePanel(panelPause, Vector2.zero, easePause, timePause);
     private void OnClickDoubt() => MovePanel(panelDoubt, Vector2.zero, easeDoubt, timeDoubt);
@@ -178,7 +194,6 @@ public class UIManager : MonoBehaviour
     private void OnClickBackDoubt() 
     {
         MovePanel(panelDoubt, initPositionDoubt, easeDoubt, timeDoubt,DefaulTime);
-
         if (!isGameStart)
         {
             isGameStart = true;

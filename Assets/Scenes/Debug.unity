@@ -201,9 +201,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25a7e319c7c9d4f449ad4214ec4233ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  target: {x: 0, y: 0}
   rotationSpeed: 2
-  rotationRange: {x: -10, y: 10}
-  target: {fileID: 2087873877}
+  rotationAngle: 15
   duration: 10
   zigzagSpeed: 1
   amplitude: 1
@@ -690,6 +690,18 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 980629845442940254, guid: a31e13fcdf7f22349b59843dfc9a75cb, type: 3}
+      propertyPath: amplitude
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 980629845442940254, guid: a31e13fcdf7f22349b59843dfc9a75cb, type: 3}
+      propertyPath: zigzagSpeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 980629845442940254, guid: a31e13fcdf7f22349b59843dfc9a75cb, type: 3}
+      propertyPath: rotationAngle
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 1122709835964242989, guid: a31e13fcdf7f22349b59843dfc9a75cb, type: 3}
       propertyPath: win
       value: 
@@ -702,6 +714,14 @@ PrefabInstance:
       propertyPath: introduccion
       value: 
       objectReference: {fileID: 1254630284}
+    - target: {fileID: 1597327691341656984, guid: a31e13fcdf7f22349b59843dfc9a75cb, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 943
+      objectReference: {fileID: 0}
+    - target: {fileID: 2358862030578079404, guid: a31e13fcdf7f22349b59843dfc9a75cb, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 942.9999
+      objectReference: {fileID: 0}
     - target: {fileID: 3825236216210243337, guid: a31e13fcdf7f22349b59843dfc9a75cb, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0

@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
@@ -9,6 +10,9 @@ public class MenuManager : MonoBehaviour
     [Header("Buttons")]
     [SerializeField] private Button buttonPlay;
     [SerializeField] private Button buttonContinue;
+    [SerializeField] private Button buttonExit;
+    [SerializeField] private Button buttonSttings;
+
 
     [Header("Title")]
     [SerializeField] private Transform title;
@@ -42,14 +46,18 @@ public class MenuManager : MonoBehaviour
     [Header("Events")]
     [SerializeField] private UnityEvent OnPlay;
 
+    private bool isInteract;
     private void OnEnable()
     {
         buttonPlay.onClick.AddListener(DeletePlayerPrefs);
-
+        buttonContinue.onClick.AddListener(ContinueScene);
+        buttonExit.onClick.AddListener(ExitGame);
     }
     private void OnDisable()
     {
         buttonPlay.onClick.RemoveListener(DeletePlayerPrefs);
+        buttonContinue.onClick.RemoveListener(ContinueScene);
+        buttonExit.onClick.RemoveListener(ExitGame);
     }
     private void Start()
     {
@@ -61,12 +69,37 @@ public class MenuManager : MonoBehaviour
         tween.Kill();
         tweenEffet.Kill();
     }
+    private void ExitGame()
+    {
+        if (!isInteract)
+        {
+            scene.Exit();
+            isInteract = true;
+        }
+    }
     private void DeletePlayerPrefs()
     {
-        PlayerPrefs.DeleteAll();
-        audioSource.Play();
-        OnPlay?.Invoke();
-        StartCoroutine(EffectSun());
+        GameManager.instance.GameOver();
+        EffectSun(LoadScene);
+    }
+    private void EffectSun(Action OnComplete = null)
+    {
+        if (!isInteract)
+        {
+            isInteract = true;
+            buttonSttings.onClick.RemoveAllListeners();
+            audioSource.Play();
+            OnPlay?.Invoke();
+            StartCoroutine(EffectSunCoroutine(OnComplete));
+        }
+    }
+    private void ContinueScene()
+    {
+        EffectSun(CurrentLoadScene);
+    }
+    private void CurrentLoadScene()
+    {
+        scene.CurrentLoadScene();
     }
     private void MoveTitle()
     {
@@ -80,7 +113,7 @@ public class MenuManager : MonoBehaviour
         tween.SetEase(Ease.InOutSine);
         tween.SetLoops(-1, LoopType.Yoyo);
     }
-    private IEnumerator EffectSun()
+    private IEnumerator EffectSunCoroutine(Action OnComplete = null)
     {
         while (ligh2D.intensity <= 2)
         {
@@ -92,7 +125,9 @@ public class MenuManager : MonoBehaviour
             yield return null;
         }
         tweenEffet = image.DOFade(1, timeEffectFade);
-        tweenEffet.OnComplete(LoadScene);
+        tweenEffet.OnComplete(() => {
+            OnComplete?.Invoke();
+        });
     }
     private void LoadScene()
     {

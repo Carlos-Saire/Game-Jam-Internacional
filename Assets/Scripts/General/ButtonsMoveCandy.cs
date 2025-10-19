@@ -3,19 +3,24 @@ using UnityEngine;
 
 public class ButtonsMoveCandy : MonoBehaviour
 {
+    [Header("Target (anchored position in UI)")]
+    [SerializeField] private Vector2 target;
+
     [Header("Rotation Settings")]
-    [SerializeField] private float rotationSpeed = 0.5f;
-    [SerializeField] private Vector2 rotationRange = new Vector2(-1f, 1f);
+    [SerializeField] private float rotationSpeed = 0.5f; 
+    [SerializeField] private float rotationAngle = 15f; 
+
+    [Header("Movement Settings")]
+    [SerializeField] private float duration = 2f;        
+    [SerializeField] private float zigzagSpeed = 5f;     
+    [SerializeField] private float amplitude = 50f;     
+
     private RectTransform rectTransform;
+    private Sequence moveSequence;
 
-    [SerializeField] private RectTransform target;          
-    [SerializeField] private float duration = 2f;       
-    [SerializeField] private float zigzagSpeed = 5f;    
-    [SerializeField] private float amplitude = 1f;
-
-    private Tween moveY;
-    private Tween moveX;
-    private Tween dance;
+    [Header("Rotation Settings")]
+    [SerializeField] private Vector2 rotationRange = new Vector2(-1f, 1f);
+    private Tween tween;
     private void Awake()
     {
         rectTransform = GetComponent<RectTransform>();
@@ -23,53 +28,61 @@ public class ButtonsMoveCandy : MonoBehaviour
 
     private void Start()
     {
-        MoveZigZag();
+        MoveZigZagAndDance();
     }
+
     private void OnDestroy()
     {
-        moveY.Kill(); 
-        moveX.Kill();
-        dance.Kill();
+        moveSequence?.Kill();
+        tween?.Kill();
     }
-#if UNITY_EDITOR
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.green;
-        Gizmos.DrawSphere(target.position, 1);
-    }
-#endif
-    private void MoveZigZag()
-    {
-        Vector3 startPos = rectTransform.position;
-        Vector3 endPos = target.position;
 
-        moveY = rectTransform.DOMoveY(endPos.y, duration);
-        moveY.SetEase(Ease.Linear);
+    private void MoveZigZagAndDance()
+    {
+        Vector2 startPos = rectTransform.anchoredPosition;
+        Vector2 endPos = target;
+
+        Tween moveY = rectTransform.DOAnchorPosY(endPos.y, duration)
+            .SetEase(Ease.Linear)
+            .SetUpdate(true);
 
         int loopCount = Mathf.Max(1, Mathf.RoundToInt(zigzagSpeed * duration));
+        float singleXDuration = duration / (loopCount * 2f);
 
-        moveX = rectTransform.DOMoveX(startPos.x + amplitude, duration / (loopCount * 2));
-        moveX.SetEase(Ease.InOutSine);
-        moveX.SetLoops(loopCount * 2, LoopType.Yoyo);
+        Tween moveX = rectTransform.DOAnchorPosX(startPos.x + amplitude, singleXDuration)
+            .SetEase(Ease.InOutSine)
+            .SetLoops(loopCount * 2, LoopType.Yoyo)
+            .SetUpdate(true);
 
-        DOTween.Sequence().Join(moveY).Join(moveX).OnComplete(Dance);
-    }
-    private void Dance()
-    {
-        MoveLeft();
+        rectTransform.DOLocalRotate(new Vector3(0, 0, rotationAngle), rotationSpeed, RotateMode.Fast)
+            .SetEase(Ease.InOutSine)
+            .SetLoops(-1, LoopType.Yoyo)
+            .SetUpdate(true);
+
+        moveSequence = DOTween.Sequence();
+        moveSequence
+            .Join(moveY)
+            .Join(moveX)
+            .SetUpdate(true)
+            .OnComplete(() =>
+            {
+                rectTransform.DOKill();
+                MoveLeft();
+                rectTransform.localRotation = Quaternion.identity;
+            });
     }
     private void MoveLeft()
     {
-        dance = rectTransform.DORotate(new Vector3(0, 0, rotationRange.y), rotationSpeed, RotateMode.Fast);
-        dance.SetEase(Ease.Linear);
-        dance.SetUpdate(true);
-        dance.OnComplete(MoveRight);
+        tween = rectTransform.DORotate(new Vector3(0, 0, rotationRange.y), rotationSpeed, RotateMode.Fast);
+        tween.SetEase(Ease.Linear);
+        tween.SetUpdate(true);
+        tween.OnComplete(MoveRight);
     }
     private void MoveRight()
     {
-        dance = rectTransform.DORotate(new Vector3(0, 0, rotationRange.x), rotationSpeed, RotateMode.Fast);
-        dance.SetEase(Ease.Linear);
-        dance.SetUpdate(true);
-        dance.OnComplete(MoveLeft);
+        tween = rectTransform.DORotate(new Vector3(0, 0, rotationRange.x), rotationSpeed, RotateMode.Fast);
+        tween.SetEase(Ease.Linear);
+        tween.SetUpdate(true);
+        tween.OnComplete(MoveLeft);
     }
 }

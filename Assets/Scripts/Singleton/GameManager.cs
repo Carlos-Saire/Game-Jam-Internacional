@@ -61,6 +61,13 @@ public class GameManager : MonoBehaviour
         ++CountSweet;
         ++CurrentMaxLevel;
     }
+    public void GameOver()
+    {
+        PlayerPrefs.DeleteKey("countSweet");
+        PlayerPrefs.DeleteKey("currentMaxLevel");
+        CountSweet = 0;
+        CurrentMaxLevel = 1;
+    }
     private void SaveData()
     {
         PlayerPrefs.SetInt("countSweet", CountSweet);

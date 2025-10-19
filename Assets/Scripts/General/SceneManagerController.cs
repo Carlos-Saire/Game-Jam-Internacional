@@ -5,6 +5,7 @@ public class SceneManagerController : MonoBehaviour
     [SerializeField] private string[] games;
     public void LoadScene(string scene)
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene(scene);
     }
     public void CurrentLoadScene()
