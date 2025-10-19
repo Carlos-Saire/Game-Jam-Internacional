@@ -20,8 +20,13 @@ public class AudioManager : MonoBehaviour
     {
         audioSettings.LoadVolumes();
     }
+    private void OnDestroy()
+    {
+        audioSettings.SaveVolumes();
+    }
     private void Start()
     {
+
         sliderMaster.value = audioSettings.GetMasterVolume();
         sliderMaster.onValueChanged.AddListener(UpdateMasterVolume);
 
@@ -35,10 +40,6 @@ public class AudioManager : MonoBehaviour
         UpdateMusicVolume(sliderMusic.value);
         UpdateSFXVolume(sliderSFX.value);
 
-    }
-    private void OnApplicationQuit()
-    {
-        audioSettings.SaveVolumes();
     }
     private void UpdateMasterVolume(float value)
     {

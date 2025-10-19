@@ -978,8 +978,8 @@ MonoBehaviour:
   dialogues:
   - "Bienvenido, peque\xF1o mortal... a HouseLand, la casa donde los dulces no se
     regalan\u2026 \xA1se ganan!"
-  - "Aqu\xED nada es lo que parece. Supera mis pruebas, re\xFAne los caramelos\u2026
-    y tal vez, solo tal vez, salgas de aqu\xED antes de la medianoche."
+  - "Aqui nada es lo que parece. Supera mis pruebas, reune los caramelos\u2026 y
+    tal vez, solo tal vez, salgas de aqui antes de la medianoche."
   - "Que empiece el juego\u2026 humano."
   typingSpeed: 0.08
   waitAfterLine: 1.2
@@ -1429,6 +1429,52 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a31e13fcdf7f22349b59843dfc9a75cb, type: 3}
+--- !u!1 &1969922352
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1969922354}
+  - component: {fileID: 1969922353}
+  m_Layer: 0
+  m_Name: GameManger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1969922353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1969922352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4297e62440f0ff4f812e261a6f585ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  score: {fileID: 11400000, guid: 48fb0ce53ba670d43badb09b63e506fb, type: 2}
+  scoreToWin: 70
+--- !u!4 &1969922354
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1969922352}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.721842, y: 1.5316807, z: -0.005914171}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2001404460
 GameObject:
   m_ObjectHideFlags: 0
@@ -1602,3 +1648,4 @@ SceneRoots:
   - {fileID: 718621895}
   - {fileID: 2145775044}
   - {fileID: 1875594640}
+  - {fileID: 1969922354}

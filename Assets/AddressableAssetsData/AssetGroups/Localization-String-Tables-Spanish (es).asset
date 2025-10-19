@@ -27,6 +27,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-es
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9c337b154a018db42b4b42d1cf4117d6
+    m_Address: Creditos_es
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-es
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: d1b7ce67b3d43f04b821fdadf69e9125
     m_Address: TutorialGame3_es
     m_ReadOnly: 1

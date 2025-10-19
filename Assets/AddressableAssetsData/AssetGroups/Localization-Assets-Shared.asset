@@ -25,6 +25,11 @@ MonoBehaviour:
     m_ReadOnly: 1
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c45163f539c50ab4f9546e5900e1afe6
+    m_Address: Assets/Table/Creditos Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: d77f5d57885d24e4887c344529b2b7d1
     m_Address: Assets/Table/TutorialGame3 Shared Data.asset
     m_ReadOnly: 1
