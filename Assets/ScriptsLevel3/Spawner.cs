@@ -2,7 +2,7 @@ using UnityEngine;
 using System.Collections;
 namespace Game3
 {
-    public class Spawner : MonoBehaviour
+    public class Spawner : StartableEntity
     {
         public GameObject candyPrefab;
         public GameObject pumpkinPrefab;
@@ -19,6 +19,8 @@ namespace Game3
 
         private void Update()
         {
+            if (!isStartGame) return;
+
             if (GameManagerLevel3.Instance != null &&
                 GameManagerLevel3.Instance.gameStarted && !spawningStarted)
             {

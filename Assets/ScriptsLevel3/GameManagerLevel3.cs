@@ -2,7 +2,7 @@ using TMPro;
 using UnityEngine;
 namespace Game3
 {
-    public class GameManagerLevel3 : MonoBehaviour
+    public class GameManagerLevel3 : StartableEntity
     {
         public static GameManagerLevel3 Instance;
 
@@ -42,6 +42,9 @@ namespace Game3
         }
         private void Update()
         {
+            if (!isStartGame) return;
+
+
             if (!gameStarted || gameEnded) return;
 
             remainingTime -= Time.deltaTime;
