@@ -39,12 +39,12 @@ namespace Game1
             currentTime -= Time.deltaTime;
             text.text = "Tiempo: " +((int)currentTime).ToString();
 
-            if (!isGameFast && currentTime <= 10 && currentTime > 0)
+            if (!isGameFast && currentTime <= 30 && currentTime > 0)
             {
                 isGameFast = true;
                 OnGameSpeedIncreased?.Invoke(true);
             }
-            else if(isGameFast && currentTime >= 10 && currentTime > 0)
+            else if(isGameFast && currentTime >= 30 && currentTime > 0)
             {
                 isGameFast = false;
                 OnGameSpeedIncreased?.Invoke(false);
