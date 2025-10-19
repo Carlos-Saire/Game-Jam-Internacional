@@ -4,7 +4,6 @@
 TagManager:
   serializedVersion: 3
   tags:
-<<<<<<< HEAD
   - Good
   - Enemy1
   - Enemy2
@@ -12,10 +11,8 @@ TagManager:
   - Calabaza
   - Candy
   - Ghost
-=======
   - Vertical
   - Horizontal
->>>>>>> Nivel3
   layers:
   - Default
   - TransparentFX

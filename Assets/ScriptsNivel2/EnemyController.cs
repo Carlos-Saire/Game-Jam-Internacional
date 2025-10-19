@@ -6,7 +6,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 
-public class EnemyController : MonoBehaviour
+public class EnemyController : StartableEntity
 {
     Rigidbody2D _compRigidbody2D;
     [SerializeField] float TimeFreeze;
@@ -32,17 +32,21 @@ public class EnemyController : MonoBehaviour
         ActivateEnemys();
     }
 
-    private void OnEnable()
+    protected override void OnEnable()
     {
+        base.OnEnable();
         InputReader.OnClickLeft += ScaryGhost;
     }
 
-    private void OnDisable()
+    protected override void OnDisable()
     {
+        base.OnDisable();
         InputReader.OnClickLeft += ScaryGhost;
     }
     private void Update()
     {
+        if (!isStartGame) return;
+
         if (TimeFreeze > 0)
         {
             transform.position = Vector2.MoveTowards(transform.position, startPostition, speedMove * Time.deltaTime);
