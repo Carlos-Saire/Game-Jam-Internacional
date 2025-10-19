@@ -149,7 +149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: {fileID: 11400000, guid: 48fb0ce53ba670d43badb09b63e506fb, type: 2}
-  scoreToWin: 0
+  scoreToWin: 70
 --- !u!4 &156342159
 Transform:
   m_ObjectHideFlags: 0
