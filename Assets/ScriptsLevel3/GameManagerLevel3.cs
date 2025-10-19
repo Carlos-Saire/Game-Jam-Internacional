@@ -2,7 +2,7 @@ using TMPro;
 using UnityEngine;
 namespace Game3
 {
-    public class GameManagerLevel3 : MonoBehaviour
+    public class GameManagerLevel3 : StartableEntity
     {
         public static GameManagerLevel3 Instance;
 
@@ -42,6 +42,9 @@ namespace Game3
         }
         private void Update()
         {
+            if (!isStartGame) return;
+
+
             if (!gameStarted || gameEnded) return;
 
             remainingTime -= Time.deltaTime;
@@ -52,12 +55,12 @@ namespace Game3
                 EndGame(false);
             }
 
-            timerText.text = "Time: " + Mathf.Ceil(remainingTime);
+            timerText.text = "Tiempo: " + Mathf.Ceil(remainingTime);
         }
         private void UpdateTexts()
         {
-            scoreText.text = "Score: " + score + "/" + totalCandies;
-            lifeText.text = "Lives: " + playerLives;
+            scoreText.text = "Caramelos: " + score + "/" + totalCandies;
+            lifeText.text = "Salud: " + playerLives;
         }
         public void AddScore(int amount)
         {

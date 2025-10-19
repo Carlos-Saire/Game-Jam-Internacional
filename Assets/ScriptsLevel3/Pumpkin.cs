@@ -4,12 +4,23 @@ namespace Game3
 {
     public class Pumpkin : ClickableItem
     {
-        private float lifeTime = 5f;
+        public AudioSource audioSource;
+        public GameObject effectprefab;
+        private float lifeTime = 7f;
 
         protected override void Start()
         {
+            audioSource = GetComponent<AudioSource>();
+
             base.Start();
-            moveSpeed = 1.5f; 
+            moveSpeed = 8f;
+
+            if (audioSource != null)
+            {
+                audioSource.pitch = Random.Range(0.7f, 1.4f);
+                audioSource.Play();
+            }
+
             Destroy(gameObject, lifeTime); 
         }
 
@@ -17,7 +28,10 @@ namespace Game3
         {
             Debug.Log("Click calabaza");
             GameManagerLevel3.Instance.ReduceLife(1);
-            // SE PUEDE PONER EL SONIDO MALO ACA O SUS EFECTOS VISUALES si es q hay xd
+
+            GameObject trick = Instantiate(effectprefab, transform.position, Quaternion.identity);
+            Destroy(trick,0.5f);
+
             Destroy(gameObject);
         }
     }

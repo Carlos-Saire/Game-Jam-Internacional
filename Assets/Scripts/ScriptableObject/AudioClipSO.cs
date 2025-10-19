@@ -22,4 +22,8 @@ public class AudioClipSO : ScriptableObject
         Destroy(audioObject, audioClip.length);
 
     }
+    public void SetPitch()
+    {
+        pitch = Random.Range(0.8f, 1.2f);
+    }
 }
