@@ -6,6 +6,9 @@ namespace Game3
     {
         void Update()
         {
+            if (Time.timeScale == 0) return;
+            if (GameManagerLevel3.Instance == null) return;
+            if (!GameManagerLevel3.Instance.gameStarted || GameManagerLevel3.Instance.gameEnded) return;
             if (Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame)
             {
                 DetectClick();

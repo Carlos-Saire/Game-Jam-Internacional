@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Caramelo1_0: 677028895570971634
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
