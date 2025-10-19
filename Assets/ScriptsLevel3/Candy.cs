@@ -10,7 +10,7 @@ namespace Game3
         protected override void Start()
         {
             base.Start();
-            moveSpeed = 3.5f;
+            moveSpeed = 4f;
 
             if (candySprites != null && candySprites.Length > 0)
             {

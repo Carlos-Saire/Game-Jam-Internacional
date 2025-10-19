@@ -52,12 +52,12 @@ namespace Game3
                 EndGame(false);
             }
 
-            timerText.text = "Time: " + Mathf.Ceil(remainingTime);
+            timerText.text = "Tiempo: " + Mathf.Ceil(remainingTime);
         }
         private void UpdateTexts()
         {
-            scoreText.text = "Score: " + score + "/" + totalCandies;
-            lifeText.text = "Lives: " + playerLives;
+            scoreText.text = "Caramelos: " + score + "/" + totalCandies;
+            lifeText.text = "Salud: " + playerLives;
         }
         public void AddScore(int amount)
         {
