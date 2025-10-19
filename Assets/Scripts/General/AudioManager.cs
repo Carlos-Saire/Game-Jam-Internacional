@@ -1,7 +1,6 @@
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
-
 public class AudioManager : MonoBehaviour
 {
     [SerializeField] private SettingSO audioSettings;
