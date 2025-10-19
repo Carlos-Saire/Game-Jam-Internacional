@@ -16,7 +16,7 @@ MonoBehaviour:
   m_GUID: 1a2495d47219f7c4e86a02e96fb74cf6
   m_SerializeEntries:
   - m_GUID: 46aef1a9053447b40a7d6d0cdf817d16
-    m_Address: PapitaCaliente_es
+    m_Address: UI_es
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-es

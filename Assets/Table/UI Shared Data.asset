@@ -10,17 +10,41 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
-  m_Name: PapitaCaliente Shared Data
+  m_Name: UI Shared Data
   m_EditorClassIdentifier: 
-  m_TableCollectionName: PapitaCaliente
+  m_TableCollectionName: UI
   m_TableCollectionNameGuidString: 619549c07f4f68945bc464020a598846
   m_Entries:
   - m_Id: 232813461504
     m_Key: Play
     m_Metadata:
       m_Items: []
-  - m_Id: 458936778752
-    m_Key: New Entry
+  - m_Id: 28184435458048
+    m_Key: Continuar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28225300561920
+    m_Key: Salir
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29278469324800
+    m_Key: Musica
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29330336088064
+    m_Key: General
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29386975969280
+    m_Key: SFX
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29534745493504
+    m_Key: Ingles
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29622356115456
+    m_Key: "Espa\xF1ol"
     m_Metadata:
       m_Items: []
   m_Metadata:
