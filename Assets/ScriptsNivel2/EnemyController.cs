@@ -1,8 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 using TMPro;
-using System;
+using UnityEngine;
+using UnityEngine.InputSystem;
 
 
 public class EnemyController : MonoBehaviour
@@ -31,6 +32,15 @@ public class EnemyController : MonoBehaviour
         ActivateEnemys();
     }
 
+    private void OnEnable()
+    {
+        InputReader.OnClickLeft += ScaryGhost;
+    }
+
+    private void OnDisable()
+    {
+        InputReader.OnClickLeft += ScaryGhost;
+    }
     private void Update()
     {
         if (TimeFreeze > 0)
@@ -74,23 +84,22 @@ public class EnemyController : MonoBehaviour
         PositionToMove = newPosition;
     }
 
-    public void ResetTimeFreezeEnemy1()
-    {
-        if (gameObject.CompareTag("Enemy1"))
-        {
-            TimeFreeze = MaxTimeFreeze;
 
+
+    void ScaryGhost()
+    {
+        Vector2 mousePos = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
+        RaycastHit2D hit = Physics2D.Raycast(mousePos, Vector2.zero);
+        if (hit.collider != null && hit.collider.CompareTag("Ghost"))
+        {
+           
+                TimeFreeze = MaxTimeFreeze;   
         }
     }
 
-    public void ResetTimeFreezeEnemy2()
-    {
-        if (gameObject.CompareTag("Enemy2"))
-        {
-            TimeFreeze = MaxTimeFreeze;
+   
 
-        }
-    }
+    
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Node")
@@ -107,16 +116,6 @@ public class EnemyController : MonoBehaviour
         }
     }
 
-    private void OnEnable()
-    {
-        playerController.OnYellEnemy1 += ResetTimeFreezeEnemy1;
-        playerController.OnYellEnemy2 += ResetTimeFreezeEnemy2;
-    }
-
-    private void OnDisable()
-    {
-        playerController.OnYellEnemy1 -= ResetTimeFreezeEnemy1;
-        playerController.OnYellEnemy2 -= ResetTimeFreezeEnemy2;
-    }
+   
 
 }
