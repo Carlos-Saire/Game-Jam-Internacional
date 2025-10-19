@@ -149,7 +149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: {fileID: 11400000, guid: 48fb0ce53ba670d43badb09b63e506fb, type: 2}
-  scoreToWin: 0
+  scoreToWin: 70
 --- !u!4 &54246122
 Transform:
   m_ObjectHideFlags: 0
@@ -1189,15 +1189,15 @@ MonoBehaviour:
   - {fileID: 8913549467563818172, guid: 9e581e1b319e2724fb0bf03d414a5284, type: 3}
   - {fileID: 7537779123476154039, guid: a7d46b93b04820449a00421b44d23a4d, type: 3}
   xLimit: {x: -8, y: 8}
-  spawnInterval: 1
-  badObjectChance: 0.3
-  powerUpChance: 0.1
-  maxStoredPositions: 3
-  minDistance: 0.5
-  difficultyIncreaseRate: 0.05
-  minSpawnInterval: 0.5
+  spawnInterval: 0.5
+  badObjectChance: 0.765
+  powerUpChance: 0.07
+  maxStoredPositions: 4
+  minDistance: 0.1
+  difficultyIncreaseRate: 0.03
+  minSpawnInterval: 0.7
   maxBadChance: 0.8
-  minPowerUpChance: 0.02
+  minPowerUpChance: 0.04
 --- !u!4 &505741253
 Transform:
   m_ObjectHideFlags: 0
@@ -2036,7 +2036,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15f8caf9d58a54a4bb85d7e67105165e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initTime: 20
+  initTime: 60
 --- !u!1001 &824358580
 PrefabInstance:
   m_ObjectHideFlags: 0

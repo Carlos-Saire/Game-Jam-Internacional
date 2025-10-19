@@ -179,7 +179,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 3
   audioClipSO: {fileID: 11400000, guid: eecc5b2b873125b4d9b267f6a51db34f, type: 2}
-  incrementScore: 5
+  incrementScore: 3
   rotationSpeed: 100
 --- !u!61 &3761791572907023555
 BoxCollider2D:
