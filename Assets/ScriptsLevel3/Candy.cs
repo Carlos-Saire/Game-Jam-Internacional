@@ -7,10 +7,12 @@ namespace Game3
         [Header("Candy Sprites")]
         public Sprite[] candySprites;
 
+        public AudioClipSO audioClipSO;
+
         protected override void Start()
         {
             base.Start();
-            moveSpeed = 4f;
+            moveSpeed = 5f;
 
             if (candySprites != null && candySprites.Length > 0)
             {
@@ -23,6 +25,8 @@ namespace Game3
         {
             Debug.Log("Click caramelo");
             GameManagerLevel3.Instance.AddScore(1);
+            audioClipSO.SetPitch();
+            audioClipSO.PlayOneShoot();
             Destroy(gameObject);
         }
     }
