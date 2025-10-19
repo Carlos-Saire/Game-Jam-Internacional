@@ -108,7 +108,11 @@ public class UIManager : MonoBehaviour
             initPositionPause = panelPause.position;
             initPositionDoubt = panelDoubt.position;
         }
-        CheckButtonReboot();
+
+        if (buttonsReboot != null)
+        {
+            CheckButtonReboot();
+        }
     }
     private void OnDestroy()
     {

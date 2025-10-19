@@ -1,5 +1,5 @@
 using UnityEngine;
-using DG.Tweening;
+using TMPro;
 using UnityEngine.UI;
 
 public class AudioManager : MonoBehaviour
@@ -11,6 +11,10 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private Slider sliderMusic;
     [SerializeField] private Slider sliderSFX;
 
+    [Header("Text Music")]
+    [SerializeField] private TMP_Text textMaster;
+    [SerializeField] private TMP_Text textMusic;
+    [SerializeField] private TMP_Text textSFX;
 
     private void Awake()
     {
@@ -32,18 +36,25 @@ public class AudioManager : MonoBehaviour
         UpdateSFXVolume(sliderSFX.value);
 
     }
+    private void OnApplicationQuit()
+    {
+        audioSettings.SaveVolumes();
+    }
     private void UpdateMasterVolume(float value)
     {
+        textMaster.text = Mathf.RoundToInt(value * 100).ToString();
         audioSettings.SetMasterVolume(value);
     }
 
     private void UpdateMusicVolume(float value)
     {
+        textMusic.text = Mathf.RoundToInt(value * 100).ToString();
         audioSettings.SetMusicVolume(value);
     }
 
     private void UpdateSFXVolume(float value)
     {
+        textSFX.text = Mathf.RoundToInt(value * 100).ToString();
         audioSettings.SetSFXVolume(value);
     }
  
