@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: d7deb7b1d9dde104d9bd9ca07a41fc9a
+guid: 2e387b1ab0ce49e4a8d58558bc996655
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6352210501731914947
-    second: FANTASMA NEUTRAL_0
+      213: 677028895570971634
+    second: Caramelo1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -97,7 +97,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: Android
+    buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -110,7 +110,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: WebGL
+    buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: FANTASMA NEUTRAL_0
+      name: Caramelo1_0
       rect:
         serializedVersion: 2
-        x: 632
-        y: 93
-        width: 643
-        height: 815
+        x: 0
+        y: 0
+        width: 221
+        height: 205
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3c49c3ebbc5972850800000000000000
-      internalID: 6352210501731914947
+      spriteID: 2fbce27813a456900800000000000000
+      internalID: 677028895570971634
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      FANTASMA NEUTRAL_0: 6352210501731914947
+      Caramelo1_0: 677028895570971634
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

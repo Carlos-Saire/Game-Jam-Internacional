@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: d7deb7b1d9dde104d9bd9ca07a41fc9a
+guid: cc64d28c0f81fe743b53b668ca79fff4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6352210501731914947
-    second: FANTASMA NEUTRAL_0
+      213: 1341312415467910784
+    second: Pumpkin1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -97,19 +97,6 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
     buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -126,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: FANTASMA NEUTRAL_0
+      name: Pumpkin1_0
       rect:
         serializedVersion: 2
-        x: 632
-        y: 93
-        width: 643
-        height: 815
+        x: 0
+        y: 0
+        width: 252
+        height: 227
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3c49c3ebbc5972850800000000000000
-      internalID: 6352210501731914947
+      spriteID: 08639c8098c4d9210800000000000000
+      internalID: 1341312415467910784
       vertices: []
       indices: 
       edges: []
@@ -151,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -161,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      FANTASMA NEUTRAL_0: 6352210501731914947
+      Pumpkin1_0: 1341312415467910784
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
