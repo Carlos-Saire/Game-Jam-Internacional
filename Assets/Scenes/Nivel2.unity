@@ -616,7 +616,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogues:
-  - Ganaste UWU
+  - Impresionante... los fantasmistas han huido chillando como hojas en el viento.
+  - Pero HouseLand no termina aqui.
+  - Te queda una ultima puerta por abrir,  y detras de ella... te espera mi trono.
   typingSpeed: 0.08
   waitAfterLine: 1.2
   text: {fileID: 250359286}
@@ -1807,7 +1809,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogues:
-  - Perdite UWU
+  - 'Te adverti: en HouseLand, hasta lo dulce puede matarte... Si aun guardas caramelos
+    en el bolsillo, vuelve a intentarlo... pero esta vez, controla tu apetito.'
   typingSpeed: 0.08
   waitAfterLine: 1.2
   text: {fileID: 250359286}
