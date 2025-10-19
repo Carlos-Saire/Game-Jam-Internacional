@@ -11,6 +11,8 @@ TagManager:
   - Calabaza
   - Candy
   - Ghost
+  - Vertical
+  - Horizontal
   layers:
   - Default
   - TransparentFX
@@ -18,7 +20,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Items
   - 
   - 
   - 
@@ -48,6 +50,7 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+<<<<<<< HEAD
   - name: BackGround
     uniqueID: 3829803283
     locked: 0
@@ -57,5 +60,7 @@ TagManager:
   - name: UI
     uniqueID: 1010210089
     locked: 0
+=======
+>>>>>>> Nivel3
   m_RenderingLayers:
   - Default
