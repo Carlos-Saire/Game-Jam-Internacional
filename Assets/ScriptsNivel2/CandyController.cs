@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Rendering;
 
-public class CandyController : MonoBehaviour
+public class CandyController : StartableEntity
 {
     public static event Action<int> OnGetCandy;
     public static event Action<int> OnSetCandy;
@@ -11,19 +11,23 @@ public class CandyController : MonoBehaviour
    
     public int currentCandys = 0;
     [SerializeField] private int maxCandys;
-    private void OnEnable()
+    protected override  void OnEnable()
     {
+        base.OnEnable();
         InputReader.OnClickLeft += DropCandy;
         CalabazaController.OnGetCandys += SetCandy;
     }
 
-    private void OnDisable()
+    protected override void OnDisable()
     {
+        base.OnDisable();
         InputReader.OnClickLeft -= DropCandy;
         CalabazaController.OnGetCandys -= SetCandy;
     }
     void DropCandy()
     {
+        if(!isStartGame) return;
+
         Vector2 mousePos = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
         RaycastHit2D hit = Physics2D.Raycast(mousePos, Vector2.zero);
 

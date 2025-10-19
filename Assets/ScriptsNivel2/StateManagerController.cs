@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 
 public class StateManagerController : MonoBehaviour
@@ -23,14 +22,12 @@ public class StateManagerController : MonoBehaviour
 
     void Win()
     {
-        Time.timeScale = 0.0f;
- 
+        GameManager.instance.Win();
     }
 
     void Lose()
     {
-        Time.timeScale = 0.0f;
-
+        GameManager.instance.Fail();
     }
 }
 

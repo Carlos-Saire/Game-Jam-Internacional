@@ -96,4 +96,12 @@ public class GameManager : MonoBehaviour
             OnGameWin?.Invoke(false);
         }
     }
+    public void Win()
+    {
+        OnGameWin?.Invoke(true);
+    }
+    public void Fail()
+    {
+        OnGameWin?.Invoke(false);
+    }
 }

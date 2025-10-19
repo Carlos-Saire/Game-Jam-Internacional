@@ -951,7 +951,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f90848ac9fe78414597f2fb51e56486f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogues: []
+  dialogues:
+  - Ganaste UWU
   typingSpeed: 0.08
   waitAfterLine: 1.2
   text: {fileID: 250359286}
@@ -1562,7 +1563,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f90848ac9fe78414597f2fb51e56486f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogues: []
+  dialogues:
+  - Perdite UWU
   typingSpeed: 0.08
   waitAfterLine: 1.2
   text: {fileID: 250359286}
