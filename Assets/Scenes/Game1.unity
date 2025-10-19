@@ -1363,6 +1363,38 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 442
       objectReference: {fileID: 0}
+    - target: {fileID: 754796069534812020, guid: a31e13fcdf7f22349b59843dfc9a75cb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 754796069534812020, guid: a31e13fcdf7f22349b59843dfc9a75cb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 754796069534812020, guid: a31e13fcdf7f22349b59843dfc9a75cb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: -3519015995678718549, guid: c00ac7137bf33d1469a24be130ea303a, type: 3}
+    - target: {fileID: 754796069534812020, guid: a31e13fcdf7f22349b59843dfc9a75cb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 754796069534812020, guid: a31e13fcdf7f22349b59843dfc9a75cb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 754796069534812020, guid: a31e13fcdf7f22349b59843dfc9a75cb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SceneManagerController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 754796069534812020, guid: a31e13fcdf7f22349b59843dfc9a75cb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Nivel2
+      objectReference: {fileID: 0}
+    - target: {fileID: 754796069534812020, guid: a31e13fcdf7f22349b59843dfc9a75cb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 885487538999011067, guid: a31e13fcdf7f22349b59843dfc9a75cb, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 781
