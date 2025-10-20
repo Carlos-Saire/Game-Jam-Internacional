@@ -330,6 +330,7 @@ GameObject:
   m_Component:
   - component: {fileID: 230250043}
   - component: {fileID: 230250044}
+  - component: {fileID: 230250045}
   m_Layer: 0
   m_Name: GameObject (2)
   m_TagString: Untagged
@@ -449,6 +450,41 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &230250045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 230250042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d18ed12b29a9aa3479eb5083b95f899d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_LocalizedAssetReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:d280924d669c7434c90ba149c432ede6
+    m_TableEntryReference:
+      m_KeyId: 147404849152
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+  m_UpdateAsset:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 230250044}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: set_clip
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
 --- !u!1 &259573099
 GameObject:
   m_ObjectHideFlags: 0
@@ -963,6 +999,7 @@ GameObject:
   m_Component:
   - component: {fileID: 355581201}
   - component: {fileID: 355581202}
+  - component: {fileID: 355581203}
   m_Layer: 0
   m_Name: GameObject (1)
   m_TagString: Untagged
@@ -1082,6 +1119,41 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &355581203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 355581200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d18ed12b29a9aa3479eb5083b95f899d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_LocalizedAssetReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:d280924d669c7434c90ba149c432ede6
+    m_TableEntryReference:
+      m_KeyId: 116803207168
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+  m_UpdateAsset:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 355581202}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: set_clip
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
 --- !u!1 &390085048
 GameObject:
   m_ObjectHideFlags: 0
@@ -2075,9 +2147,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LocalizedAssetReference:
     m_TableReference:
-      m_TableCollectionName: 
+      m_TableCollectionName: GUID:099318118febee642a07ec10af572f36
     m_TableEntryReference:
-      m_KeyId: 0
+      m_KeyId: 97442299904
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
@@ -8403,9 +8475,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LocalizedAssetReference:
     m_TableReference:
-      m_TableCollectionName: 
+      m_TableCollectionName: GUID:099318118febee642a07ec10af572f36
     m_TableEntryReference:
-      m_KeyId: 0
+      m_KeyId: 17444339712
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
@@ -8818,9 +8890,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LocalizedAssetReference:
     m_TableReference:
-      m_TableCollectionName: 
+      m_TableCollectionName: GUID:099318118febee642a07ec10af572f36
     m_TableEntryReference:
-      m_KeyId: 0
+      m_KeyId: 63078367232
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
@@ -8849,6 +8921,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1041737174}
   - component: {fileID: 1041737175}
+  - component: {fileID: 1041737176}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -8968,6 +9041,41 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1041737176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1041737173}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d18ed12b29a9aa3479eb5083b95f899d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_LocalizedAssetReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:d280924d669c7434c90ba149c432ede6
+    m_TableEntryReference:
+      m_KeyId: 7726137344
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+  m_UpdateAsset:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1041737175}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: set_clip
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
 --- !u!1 &1094995202
 GameObject:
   m_ObjectHideFlags: 0
@@ -9838,9 +9946,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LocalizedAssetReference:
     m_TableReference:
-      m_TableCollectionName: 
+      m_TableCollectionName: GUID:099318118febee642a07ec10af572f36
     m_TableEntryReference:
-      m_KeyId: 0
+      m_KeyId: 77976535040
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0

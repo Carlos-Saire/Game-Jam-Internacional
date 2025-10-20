@@ -115,6 +115,11 @@ MonoBehaviour:
     m_ReadOnly: 1
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d280924d669c7434c90ba149c432ede6
+    m_Address: Assets/Table/Introduccion/Game1/IG1P1 Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: d77f5d57885d24e4887c344529b2b7d1
     m_Address: Assets/Table/TutorialGame3 Shared Data.asset
     m_ReadOnly: 1
@@ -122,6 +127,11 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: e3dec7e7682d0bf4bb8613b70ffd3902
     m_Address: Assets/Table/Fail/Game1/Fail1 Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f272ec7f2a757904dbfec61d5032113f
+    m_Address: Assets/Table/Audios/Game2/FailGame2 Shared Data.asset
     m_ReadOnly: 1
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

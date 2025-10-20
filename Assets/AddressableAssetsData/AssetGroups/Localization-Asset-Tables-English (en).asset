@@ -15,6 +15,12 @@ MonoBehaviour:
   m_GroupName: Localization-Asset-Tables-English (en)
   m_GUID: a52f20ed0c5723d42be11b3695848c8f
   m_SerializeEntries:
+  - m_GUID: 1e85bd6406282ac4ea14074b6256fb75
+    m_Address: IntroductionGame1_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 5735982e6c6b77d40bcc235966dd41ff
     m_Address: IntroudccionGame1_en
     m_ReadOnly: 1
@@ -29,6 +35,12 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 8f34368909baabe43b9803ba9c947cc1
     m_Address: WinGame1_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9d320f4f15b3bf548b6f67f8a06af19e
+    m_Address: FailGame2_en
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-en

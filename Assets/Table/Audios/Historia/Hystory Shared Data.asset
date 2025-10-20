@@ -46,11 +46,14 @@ MonoBehaviour:
         - m_KeyId: 5834506240
           m_TableCodes:
           - es
+          - en
         - m_KeyId: 106535550976
           m_TableCodes:
           - es
+          - en
         - m_KeyId: 115356172288
           m_TableCodes:
           - es
+          - en
         m_TypeString: UnityEngine.AudioClip, UnityEngine.AudioModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null

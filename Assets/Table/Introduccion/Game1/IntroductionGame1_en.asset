@@ -10,22 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 97269afb30aa84742ae3f3342603618a, type: 3}
-  m_Name: FailGame2_es
+  m_Name: IntroductionGame1_en
   m_EditorClassIdentifier: 
   m_LocaleId:
-    m_Code: es
-  m_SharedData: {fileID: 11400000, guid: f272ec7f2a757904dbfec61d5032113f, type: 2}
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: d280924d669c7434c90ba149c432ede6, type: 2}
   m_Metadata:
     m_Items: []
-  m_TableData:
-  - m_Id: 5444435968
-    m_Localized: ce8fe42598b401e4fb70f13805ea80b0
-    m_Metadata:
-      m_Items: []
-  - m_Id: 56279400448
-    m_Localized: 22340a8025d2a5742817fc2dc3af3a5d
-    m_Metadata:
-      m_Items: []
+  m_TableData: []
   references:
     version: 2
     RefIds: []

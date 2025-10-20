@@ -10,39 +10,46 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
-  m_Name: FailGame2 Shared Data
+  m_Name: IntroductionGame1 Shared Data
   m_EditorClassIdentifier: 
-  m_TableCollectionName: FailGame2
-  m_TableCollectionNameGuidString: f272ec7f2a757904dbfec61d5032113f
+  m_TableCollectionName: IntroductionGame1
+  m_TableCollectionNameGuidString: d280924d669c7434c90ba149c432ede6
   m_Entries:
-  - m_Id: 5444435968
-    m_Key: FGP1
+  - m_Id: 7726137344
+    m_Key: P1
     m_Metadata:
       m_Items: []
-  - m_Id: 56279400448
-    m_Key: FGP2
+  - m_Id: 116803207168
+    m_Key: P2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 147404849152
+    m_Key: P3
     m_Metadata:
       m_Items: []
   m_Metadata:
     m_Items:
-    - rid: 101930676429521284
+    - rid: 101930676429521312
   m_KeyGenerator:
-    rid: 101930676429521283
+    rid: 101930676429521310
   references:
     version: 2
     RefIds:
-    - rid: 101930676429521283
+    - rid: 101930676429521310
       type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
       data:
-        m_CustomEpoch: 1760926291610
-    - rid: 101930676429521284
+        m_CustomEpoch: 1760927811824
+    - rid: 101930676429521312
       type: {class: AssetTypeMetadata, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
       data:
         m_Entries:
-        - m_KeyId: 5444435968
+        - m_KeyId: 7726137344
           m_TableCodes:
           - es
-        - m_KeyId: 56279400448
+        - m_KeyId: 116803207168
+          m_TableCodes:
+          - es
+        - m_KeyId: 147404849152
           m_TableCodes:
           - es
         m_TypeString: UnityEngine.AudioClip, UnityEngine.AudioModule, Version=0.0.0.0,
