@@ -961,16 +961,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f90848ac9fe78414597f2fb51e56486f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogues:
-  - Impresionante... los fantasmistas han huido chillando como hojas en el viento.
-  - Pero HouseLand no termina aqui.
-  - Te queda una ultima puerta por abrir,  y detras de ella... te espera mi trono.
   typingSpeed: 0.08
   waitAfterLine: 1.2
   text: {fileID: 250359286}
   audiosDialogues: []
-  value: []
   tablename: 
+  value: []
 --- !u!1 &313365216
 GameObject:
   m_ObjectHideFlags: 0
@@ -1862,19 +1858,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f90848ac9fe78414597f2fb51e56486f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogues:
-  - "As\xED que sobreviviste al primer fest\xEDn\u2026 interesante\u2026.Ten cuidado
-    con los fantasmistas."
-  - 'Ellos odian que les robes sus golosinas, pero puedes espantarlos si usas el
-    truco correcto. '
-  - " Y no seas tan codicioso\u2026 si dejas que tu barra de dulces se llene demasiado, "
-  - "la casa pensar\xE1 que eres uno de los suyos\u2026 y te devorar\xE1 con gusto\u2026. "
   typingSpeed: 0.08
   waitAfterLine: 1.2
   text: {fileID: 250359286}
   audiosDialogues: []
-  value: []
   tablename: 
+  value: []
 --- !u!1 &760637168
 GameObject:
   m_ObjectHideFlags: 0
@@ -2213,8 +2202,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0242f5c47c20e00478392534501d550f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TimeFreeze: 5
-  MaxTimeFreeze: 5
+  TimeFreeze: 3
+  MaxTimeFreeze: 3
   FirstDestination: {x: 4.51, y: 0.14}
   ScarySprite: {fileID: 5691171096948677276, guid: 2607c4195541c814d876d54a08df65e6, type: 3}
   NormalSprite: {fileID: 6352210501731914947, guid: d7deb7b1d9dde104d9bd9ca07a41fc9a, type: 3}
@@ -2502,15 +2491,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f90848ac9fe78414597f2fb51e56486f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogues:
-  - 'Te adverti: en HouseLand, hasta lo dulce puede matarte... Si aun guardas caramelos
-    en el bolsillo, vuelve a intentarlo... pero esta vez, controla tu apetito.'
   typingSpeed: 0.08
   waitAfterLine: 1.2
   text: {fileID: 250359286}
   audiosDialogues: []
-  value: []
   tablename: 
+  value: []
 --- !u!1 &1114441546
 GameObject:
   m_ObjectHideFlags: 0
@@ -3457,8 +3443,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0242f5c47c20e00478392534501d550f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TimeFreeze: 5
-  MaxTimeFreeze: 5
+  TimeFreeze: 3
+  MaxTimeFreeze: 3
   FirstDestination: {x: 4.82, y: -2.9}
   ScarySprite: {fileID: 5691171096948677276, guid: 2607c4195541c814d876d54a08df65e6, type: 3}
   NormalSprite: {fileID: 6352210501731914947, guid: d7deb7b1d9dde104d9bd9ca07a41fc9a, type: 3}
@@ -4026,8 +4012,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0242f5c47c20e00478392534501d550f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TimeFreeze: 5
-  MaxTimeFreeze: 5
+  TimeFreeze: 3
+  MaxTimeFreeze: 3
   FirstDestination: {x: -4.86, y: 2.13}
   ScarySprite: {fileID: 5691171096948677276, guid: 2607c4195541c814d876d54a08df65e6, type: 3}
   NormalSprite: {fileID: 6352210501731914947, guid: d7deb7b1d9dde104d9bd9ca07a41fc9a, type: 3}
@@ -4641,8 +4627,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   trushPrefab: {fileID: 3133171421450933054, guid: 53311fbccfb6d1042a6bb9711571dd42, type: 3}
   txtMap: {fileID: 4900000, guid: 8be35e71315592f4492af1b0ee3e517a, type: 3}
-  MinNumberInitialTrush: 5
-  MaxNumberInitialTrush: 10
+  MinNumberInitialTrush: 15
+  MaxNumberInitialTrush: 30
   PositionIntial: {x: -7.256, y: 2.731}
   separation: {x: 0.4507, y: 0.45066}
 --- !u!1 &1967673196

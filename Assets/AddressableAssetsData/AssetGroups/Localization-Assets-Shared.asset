@@ -20,6 +20,11 @@ MonoBehaviour:
     m_ReadOnly: 1
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 246bdf8eaf767444aaa256d268354197
+    m_Address: Assets/Table/Audios/Game1/IntroudccionGame1 Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 33bf37af8eeda9249b30d783fa6b26fc
     m_Address: Assets/Table/Win/Game1/Win1 Shared Data.asset
     m_ReadOnly: 1
