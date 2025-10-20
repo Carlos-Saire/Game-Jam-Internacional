@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Rendering;
 
-public class CandyController : StartableEntity
+public class CandyController : StartableEntity, IAuditable
 {
     public static event Action<int> OnGetCandy;
     public static event Action<int> OnSetCandy;
@@ -11,6 +11,8 @@ public class CandyController : StartableEntity
    
     public int currentCandys = 0;
     [SerializeField] private int maxCandys;
+    [SerializeField] private AudioClipSO audioEffect;
+    [SerializeField] private AudioClipSO inventoryFull;
     protected override  void OnEnable()
     {
         base.OnEnable();
@@ -31,18 +33,24 @@ public class CandyController : StartableEntity
         Vector2 mousePos = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
         RaycastHit2D hit = Physics2D.Raycast(mousePos, Vector2.zero);
 
-        
-            if (hit.collider != null && hit.collider.CompareTag("Candy"))
+
+        if (hit.collider != null && hit.collider.CompareTag("Candy"))
+        {
+            if (currentCandys < maxCandys)
             {
-                if (currentCandys < maxCandys)
-                {
-                    Destroy(hit.collider.gameObject);
-                    OnGetCandy?.Invoke(currentCandys);
-                    currentCandys++;
+                PlayMusic(audioEffect);
+                Destroy(hit.collider.gameObject);
+                OnGetCandy?.Invoke(currentCandys);
+                currentCandys++;
                 OnExistCandys?.Invoke(true);
-                }
-               
+
             }
+            else
+            {
+                PlayMusic(inventoryFull);
+            }
+
+        }
                 
             
         
@@ -58,5 +66,9 @@ public class CandyController : StartableEntity
         if (currentCandys == 0)
             OnExistCandys?.Invoke(false);
     }
-
+    public void PlayMusic(AudioClipSO audio)
+    {
+       audio.PlayOneShoot();
+       
+    }
 }
