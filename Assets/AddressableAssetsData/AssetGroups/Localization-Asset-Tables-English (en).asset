@@ -39,6 +39,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-en
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a81b3020474e5b24a83bc7bc5ec14650
+    m_Address: IntroduccionGame2_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: c5bc3629aaa41ef49842edae4eda7864
     m_Address: Hystory_en
     m_ReadOnly: 1
@@ -47,6 +53,12 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: dcda419aac94e8e46ae7bd6c3bbf9add
     m_Address: DIalogosFailGame3_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e30534570406a3c4ebf0ad6ce19371ab
+    m_Address: WinGame2_en
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-en

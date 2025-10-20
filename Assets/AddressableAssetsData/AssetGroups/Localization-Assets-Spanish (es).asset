@@ -15,6 +15,18 @@ MonoBehaviour:
   m_GroupName: Localization-Assets-Spanish (es)
   m_GUID: ceff6fe839368b04c950682e145880c7
   m_SerializeEntries:
+  - m_GUID: 174d8f81796ea0442b10ebcc4169134d
+    m_Address: Ganar-Nivel-2 (3)
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-es
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 19f50a6cee750fa46828791c458e6917
+    m_Address: Ganar-Nivel-2 (2)
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-es
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 2bcc768b9b89c7543afa4604e70bf743
     m_Address: Winparte3
     m_ReadOnly: 1
@@ -45,8 +57,32 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-es
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 875a1f53d648eaa4f99e6e04885e85dc
+    m_Address: Intro Nivel 2 (1)
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-es
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8cd30c9d718f9ce4683e84e66ec55a9f
+    m_Address: Intro Nivel 2 (3)
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-es
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 92e1f398e574a4e4b8db6963a1cb9007
     m_Address: Win parte1
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-es
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: abb031d047a25504ea722972eb683303
+    m_Address: Intro Nivel 2 (4)
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-es
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: af3a1d426a52e7a4d8dce750f4cd1afb
+    m_Address: Intro Nivel 2 (2)
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-es
@@ -95,6 +131,12 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: efc629c05068fe94fafd068e23ac3b57
     m_Address: Perder-Nivel-3
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-es
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f634a87e603b7d444b5a1bb463e478dc
+    m_Address: Ganar-Nivel-2 (1)
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-es

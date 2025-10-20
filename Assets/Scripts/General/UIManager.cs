@@ -79,6 +79,11 @@ public class UIManager : MonoBehaviour
             buttonBackPause.onClick.AddListener(OnClickBackPause);
             buttonBackSettings.onClick.AddListener(OnClickBackSettings);
             buttonSkip.onClick.AddListener(Skip);
+
+            for (int i = 0; i < buttonsReboot.Length; i++)
+            {
+                buttonsReboot[i].onClick.AddListener(Fail);
+            }
         }
     }
     private void OnDisable()
@@ -94,6 +99,10 @@ public class UIManager : MonoBehaviour
             buttonBackPause.onClick.RemoveListener(OnClickBackPause);
             buttonBackSettings.onClick.RemoveListener(OnClickBackSettings);
             buttonSkip.onClick.RemoveListener(Skip);
+            for (int i = 0;i<buttonsReboot.Length;i++)
+            {
+                buttonsReboot[i].onClick.RemoveListener(Fail);
+            }
         }
     }
     private void Start()
@@ -127,6 +136,13 @@ public class UIManager : MonoBehaviour
     {
         introduccion.StopDialogue();
         Fade();
+    }
+    private void Fail()
+    {
+        if (SceneManager.GetActiveScene().name != "Game1")
+        {
+            --GameManager.instance.CountSweet;
+        }
     }
     private void Fade()
     {

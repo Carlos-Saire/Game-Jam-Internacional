@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97269afb30aa84742ae3f3342603618a, type: 3}
+  m_Name: WinGame2_es
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: es
+  m_SharedData: {fileID: 11400000, guid: 81d7b905f1e0ffa44bc545aed86e3d81, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 212932460544
+    m_Localized: f634a87e603b7d444b5a1bb463e478dc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 224676511744
+    m_Localized: 19f50a6cee750fa46828791c458e6917
+    m_Metadata:
+      m_Items: []
+  - m_Id: 236152127488
+    m_Localized: 174d8f81796ea0442b10ebcc4169134d
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

@@ -51,8 +51,20 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-es
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b39afed1b89dd9a4cb4880af012cbe36
+    m_Address: IntroduccionGame2_es
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-es
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: bc89e04eb9170754399381c629a560d4
     m_Address: FailGame1_es
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-es
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d7dfe05454d56554786f9172cfa16879
+    m_Address: WinGame2_es
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-es

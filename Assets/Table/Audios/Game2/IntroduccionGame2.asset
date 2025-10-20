@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4db626ad063b13545924a9839ac5fa83, type: 3}
+  m_Name: IntroduccionGame2
+  m_EditorClassIdentifier: 
+  m_SharedTableData: {fileID: 11400000, guid: f99d1adb506904f449b68792b144f9bf, type: 2}
+  m_Tables:
+  - {fileID: 11400000, guid: b39afed1b89dd9a4cb4880af012cbe36, type: 2}
+  - {fileID: 11400000, guid: a81b3020474e5b24a83bc7bc5ec14650, type: 2}
+  m_Extensions: []
+  m_Group: Asset Table
+  references:
+    version: 2
+    RefIds: []

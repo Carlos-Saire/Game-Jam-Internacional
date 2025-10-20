@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
 
     [Header("")]
-    public int CountSweet { get; private set; }
+    public int CountSweet { get; set; }
     public int CurrentMaxLevel { get; private set; }
 
     [Header("Score")]
