@@ -1275,6 +1275,8 @@ MonoBehaviour:
   - {fileID: 317238978}
   - {fileID: 1730761166}
   tablename: WInGame2
+  audiosDialogues: []
+  tablename: 
   value: []
 --- !u!1 &313365216
 GameObject:
@@ -2616,6 +2618,8 @@ MonoBehaviour:
   - {fileID: 954665423}
   - {fileID: 359511462}
   tablename: IntroduccionGame2
+  audiosDialogues: []
+  tablename: 
   value: []
 --- !u!1 &760637168
 GameObject:
@@ -2955,8 +2959,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0242f5c47c20e00478392534501d550f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TimeFreeze: 5
-  MaxTimeFreeze: 5
+  TimeFreeze: 3
+  MaxTimeFreeze: 3
   FirstDestination: {x: 4.51, y: 0.14}
   ScarySprite: {fileID: 5691171096948677276, guid: 2607c4195541c814d876d54a08df65e6, type: 3}
   NormalSprite: {fileID: 6352210501731914947, guid: d7deb7b1d9dde104d9bd9ca07a41fc9a, type: 3}
@@ -3582,6 +3586,9 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  audiosDialogues: []
+  tablename: 
+  value: []
 --- !u!1 &1114441546
 GameObject:
   m_ObjectHideFlags: 0
@@ -4891,8 +4898,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0242f5c47c20e00478392534501d550f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TimeFreeze: 5
-  MaxTimeFreeze: 5
+  TimeFreeze: 3
+  MaxTimeFreeze: 3
   FirstDestination: {x: 4.82, y: -2.9}
   ScarySprite: {fileID: 5691171096948677276, guid: 2607c4195541c814d876d54a08df65e6, type: 3}
   NormalSprite: {fileID: 6352210501731914947, guid: d7deb7b1d9dde104d9bd9ca07a41fc9a, type: 3}
@@ -5666,8 +5673,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0242f5c47c20e00478392534501d550f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TimeFreeze: 5
-  MaxTimeFreeze: 5
+  TimeFreeze: 3
+  MaxTimeFreeze: 3
   FirstDestination: {x: -4.86, y: 2.13}
   ScarySprite: {fileID: 5691171096948677276, guid: 2607c4195541c814d876d54a08df65e6, type: 3}
   NormalSprite: {fileID: 6352210501731914947, guid: d7deb7b1d9dde104d9bd9ca07a41fc9a, type: 3}
@@ -6446,8 +6453,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   trushPrefab: {fileID: 3133171421450933054, guid: 53311fbccfb6d1042a6bb9711571dd42, type: 3}
   txtMap: {fileID: 4900000, guid: 8be35e71315592f4492af1b0ee3e517a, type: 3}
-  MinNumberInitialTrush: 5
-  MaxNumberInitialTrush: 10
+  MinNumberInitialTrush: 15
+  MaxNumberInitialTrush: 30
   PositionIntial: {x: -7.256, y: 2.731}
   separation: {x: 0.4507, y: 0.45066}
 --- !u!1 &1967673196
