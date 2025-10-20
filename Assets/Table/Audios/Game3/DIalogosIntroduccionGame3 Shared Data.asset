@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: DIalogosIntroduccionGame3 Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: DIalogosIntroduccionGame3
+  m_TableCollectionNameGuidString: 501d6e96fb8438441a570e09ee2a82ae
+  m_Entries:
+  - m_Id: 129017020416
+    m_Key: Parte1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 140693962752
+    m_Key: Parte2
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items:
+    - rid: 101930676429521160
+  m_KeyGenerator:
+    rid: 101930676429521158
+  references:
+    version: 2
+    RefIds:
+    - rid: 101930676429521158
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1760919747775
+    - rid: 101930676429521160
+      type: {class: AssetTypeMetadata, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries:
+        - m_KeyId: 129017020416
+          m_TableCodes:
+          - es
+        - m_KeyId: 140693962752
+          m_TableCodes:
+          - es
+        m_TypeString: UnityEngine.AudioClip, UnityEngine.AudioModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null

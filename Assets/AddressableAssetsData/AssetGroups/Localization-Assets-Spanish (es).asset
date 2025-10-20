@@ -1,0 +1,113 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Localization-Assets-Spanish (es)
+  m_EditorClassIdentifier: 
+  m_GroupName: Localization-Assets-Spanish (es)
+  m_GUID: ceff6fe839368b04c950682e145880c7
+  m_SerializeEntries:
+  - m_GUID: 2bcc768b9b89c7543afa4604e70bf743
+    m_Address: Winparte3
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-es
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2d4982fabce43c240873ea0376a57940
+    m_Address: Fail parte 4
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-es
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6b7912a2765cf1b47a235e6fd240b2a5
+    m_Address: Ganar Nivel 3 Audio (mp3cut.net) (1)
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-es
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 707634cd1b0777747bce768d4e71a498
+    m_Address: IntroduccionParte1
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-es
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7c37a84e2c260064c9e942bddb03474e
+    m_Address: Ganar Nivel 3 Audio (mp3cut.net)
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-es
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 92e1f398e574a4e4b8db6963a1cb9007
+    m_Address: Win parte1
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-es
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bc20ff6dd84a3fe4d961f8410f8f3980
+    m_Address: Fail parte 1
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-es
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c85ea3455950fd24b98b4ba5b63034ff
+    m_Address: Fail parte 2
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-es
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d1ada5e734ae70c468d2bd223fafd016
+    m_Address: IntroduccionParte2
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-es
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: dfcc6b69c7c50b94ba72478ae219d8e8
+    m_Address: Intro Nivel 3 (mp3cut.net) (1)
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-es
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e8781b8d208b8ae4686ecc104bb2dc22
+    m_Address: IntroduccionParte3
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-es
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ed630c556b7210243af891ea85ae32f4
+    m_Address: Intro Nivel 3 (mp3cut.net)
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-es
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ee851fd61bb084648a97a2c4bef29f80
+    m_Address: Fail parte 3
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-es
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: efc629c05068fe94fafd068e23ac3b57
+    m_Address: Perder-Nivel-3
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-es
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f7021eaf2e5cb8540810d3e0079d3eaf
+    m_Address: Win parte 2
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-es
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 1
+  m_Settings: {fileID: 11400000, guid: 1452393a9abc7874e9714c1db76fa670, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 52952dadab38276468d0de339c29c330, type: 2}
+    - {fileID: 11400000, guid: f75faed4548ece4489f769ca8a878488, type: 2}

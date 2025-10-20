@@ -15,8 +15,26 @@ MonoBehaviour:
   m_GroupName: Localization-String-Tables-English (en)
   m_GUID: edd85ef809b341144b1baf495cbefb1e
   m_SerializeEntries:
+  - m_GUID: 01b13da12170ddc46b2c8ee8191f4b10
+    m_Address: Introduccion3_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1cbd31ba4cc941f409ff8aca4a81d82d
+    m_Address: Prueba_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 226143201a0adc54f86ffd0ae1c38f4c
     m_Address: TutorialGame3_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2a4d21e7adcb68b4c887a2c3a12880ec
+    m_Address: Fail3_en
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-en
@@ -27,14 +45,44 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-en
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 760cb0547d817584bac87a9c4f16ee0b
+    m_Address: Introduccion1_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8ffaa665faba91b4ebd81cf10c1fd049
+    m_Address: Historia_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: b1cfeec381633c84796216ecb7b8ca16
     m_Address: UI_en
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-en
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bb011d67e57e3404c88d0c1242893541
+    m_Address: Win3_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cffc73670eac56a4bb602bc127e540c5
+    m_Address: Win1_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: dd8a5225218cd054d9e2db1644a01e55
     m_Address: TutorialGame1_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: de1be1486f1832144a103145982fca57
+    m_Address: Fail1_en
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-en

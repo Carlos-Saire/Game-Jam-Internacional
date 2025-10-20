@@ -15,6 +15,24 @@ MonoBehaviour:
   m_GroupName: Localization-String-Tables-Spanish (es)
   m_GUID: 1a2495d47219f7c4e86a02e96fb74cf6
   m_SerializeEntries:
+  - m_GUID: 0904e2c2e4383624bb807d26ef527858
+    m_Address: Win1_es
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-es
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 21ac0c1734826ca45a8f592ac3dbbfa3
+    m_Address: Introduccion1_es
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-es
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3236390ccfd352d46bfab475d1a56b19
+    m_Address: Historia_es
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-es
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 435866d8721861340839fc53c7bbac20
     m_Address: TutorialGame1_es
     m_ReadOnly: 1
@@ -27,6 +45,24 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-es
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5397acd3168e12b48ad2ed4ed01ee8dc
+    m_Address: Fail1_es
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-es
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 82c31ed3ea8f7374b899ad5694fb0258
+    m_Address: Win3_es
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-es
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8418e830e631ae14382785eec1b531c9
+    m_Address: Prueba_es
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-es
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 9c337b154a018db42b4b42d1cf4117d6
     m_Address: Creditos_es
     m_ReadOnly: 1
@@ -35,6 +71,18 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: d1b7ce67b3d43f04b821fdadf69e9125
     m_Address: TutorialGame3_es
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-es
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e3ef572bc22741d46bfaf557ae8c3565
+    m_Address: Fail3_es
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-es
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ff406e1ef27df724ab43accadbe817c1
+    m_Address: Introduccion3_es
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-es

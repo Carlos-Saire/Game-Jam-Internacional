@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Fail1_es
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: es
+  m_SharedData: {fileID: 11400000, guid: e3dec7e7682d0bf4bb8613b70ffd3902, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 5561876480
+    m_Localized: "Jajaja\u2026 te lo advert\xED, peque\xF1o glot\xF3n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 95479365632
+    m_Localized: "Tu bolsa est\xE1 llena\u2026 \xA1de basura!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 116492828672
+    m_Localized: "Si a\xFAn tienes caramelos guardados, int\xE9ntalo otra vez"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 137573400576
+    m_Localized: "Tal vez aprendas la diferencia entre un dulce\u2026 y tu perdici\xF3n"
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

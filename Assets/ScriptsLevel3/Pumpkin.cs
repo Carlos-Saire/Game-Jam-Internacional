@@ -26,7 +26,6 @@ namespace Game3
 
         public override void OnClick()
         {
-            Debug.Log("Click calabaza");
             GameManagerLevel3.Instance.ReduceLife(1);
 
             GameObject trick = Instantiate(effectprefab, transform.position, Quaternion.identity);

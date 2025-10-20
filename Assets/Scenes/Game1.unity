@@ -1599,6 +1599,7 @@ GameObject:
   m_Component:
   - component: {fileID: 535229560}
   - component: {fileID: 535229561}
+  - component: {fileID: 535229562}
   m_Layer: 0
   m_Name: GameObject (2)
   m_TagString: Untagged
@@ -1718,6 +1719,41 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &535229562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 535229559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d18ed12b29a9aa3479eb5083b95f899d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_LocalizedAssetReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:6fe1bcda90f7a9b4991dfd4495b82064
+    m_TableEntryReference:
+      m_KeyId: 182653779968
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+  m_UpdateAsset:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 535229561}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: set_clip
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
 --- !u!1 &553229599
 GameObject:
   m_ObjectHideFlags: 0
@@ -1905,6 +1941,7 @@ GameObject:
   m_Component:
   - component: {fileID: 581456976}
   - component: {fileID: 581456977}
+  - component: {fileID: 581456978}
   m_Layer: 0
   m_Name: FailParte4
   m_TagString: Untagged
@@ -2024,6 +2061,41 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &581456978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 581456975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d18ed12b29a9aa3479eb5083b95f899d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_LocalizedAssetReference:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+  m_UpdateAsset:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 581456977}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: set_clip
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
 --- !u!1 &640063229
 GameObject:
   m_ObjectHideFlags: 0
@@ -2627,6 +2699,7 @@ GameObject:
   m_Component:
   - component: {fileID: 794760673}
   - component: {fileID: 794760674}
+  - component: {fileID: 794760675}
   m_Layer: 0
   m_Name: GameObject (1)
   m_TagString: Untagged
@@ -2746,6 +2819,41 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &794760675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 794760672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d18ed12b29a9aa3479eb5083b95f899d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_LocalizedAssetReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:6fe1bcda90f7a9b4991dfd4495b82064
+    m_TableEntryReference:
+      m_KeyId: 157961912320
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+  m_UpdateAsset:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 794760674}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: set_clip
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
 --- !u!1001 &824358580
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2896,7 +3004,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2848856860318296675, guid: a31e13fcdf7f22349b59843dfc9a75cb, type: 3}
       propertyPath: m_fontSize
-      value: 72
+      value: 53.25
       objectReference: {fileID: 0}
     - target: {fileID: 3572957446391628228, guid: a31e13fcdf7f22349b59843dfc9a75cb, type: 3}
       propertyPath: m_IsActive
@@ -8161,6 +8269,7 @@ GameObject:
   m_Component:
   - component: {fileID: 923225753}
   - component: {fileID: 923225754}
+  - component: {fileID: 923225755}
   m_Layer: 0
   m_Name: FailParte1
   m_TagString: Untagged
@@ -8280,6 +8389,41 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &923225755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 923225752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d18ed12b29a9aa3479eb5083b95f899d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_LocalizedAssetReference:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+  m_UpdateAsset:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 923225754}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: set_clip
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
 --- !u!1 &981295261
 GameObject:
   m_ObjectHideFlags: 0
@@ -8290,6 +8434,7 @@ GameObject:
   m_Component:
   - component: {fileID: 981295262}
   - component: {fileID: 981295263}
+  - component: {fileID: 981295264}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -8409,6 +8554,41 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &981295264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 981295261}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d18ed12b29a9aa3479eb5083b95f899d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_LocalizedAssetReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:6fe1bcda90f7a9b4991dfd4495b82064
+    m_TableEntryReference:
+      m_KeyId: 153474007040
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+  m_UpdateAsset:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 981295263}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: set_clip
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
 --- !u!1 &994186087
 GameObject:
   m_ObjectHideFlags: 0
@@ -8504,6 +8684,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1011467820}
   - component: {fileID: 1011467821}
+  - component: {fileID: 1011467822}
   m_Layer: 0
   m_Name: FailParte2
   m_TagString: Untagged
@@ -8623,6 +8804,41 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1011467822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1011467819}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d18ed12b29a9aa3479eb5083b95f899d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_LocalizedAssetReference:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+  m_UpdateAsset:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1011467821}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: set_clip
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
 --- !u!1 &1041737173
 GameObject:
   m_ObjectHideFlags: 0
@@ -9295,10 +9511,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f90848ac9fe78414597f2fb51e56486f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogues:
-  - 'Tu primera prueba comienza aqui. '
-  - Bienvenido al salon de los dulces caidos
-  - Recoge solo los dulces brillantes, y lanza lejos los podridos.
   typingSpeed: 0.08
   waitAfterLine: 1.2
   text: {fileID: 1789350485}
@@ -9306,8 +9518,8 @@ MonoBehaviour:
   - {fileID: 355581202}
   - {fileID: 1041737175}
   - {fileID: 230250044}
+  tablename: Introduccion1
   value: []
-  tablename: 
 --- !u!4 &1632063575
 Transform:
   m_ObjectHideFlags: 0
@@ -9492,6 +9704,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1655201145}
   - component: {fileID: 1655201146}
+  - component: {fileID: 1655201147}
   m_Layer: 0
   m_Name: FailParte3
   m_TagString: Untagged
@@ -9611,6 +9824,41 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1655201147
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1655201144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d18ed12b29a9aa3479eb5083b95f899d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_LocalizedAssetReference:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+  m_UpdateAsset:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1655201146}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: set_clip
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
 --- !u!1 &1671612112
 GameObject:
   m_ObjectHideFlags: 0
@@ -9655,11 +9903,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f90848ac9fe78414597f2fb51e56486f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogues:
-  - "Jajaja\u2026 te lo advert\xED, peque\xF1o glot\xF3n"
-  - "Tu bolsa est\xE1 llena\u2026 \xA1de basura!"
-  - "Si a\xFAn tienes caramelos guardados, int\xE9ntalo otra vez"
-  - "Tal vez aprendas la diferencia entre un dulce\u2026 y tu perdici\xF3n"
   typingSpeed: 0.08
   waitAfterLine: 1.2
   text: {fileID: 1789350485}
@@ -9668,8 +9911,8 @@ MonoBehaviour:
   - {fileID: 1011467821}
   - {fileID: 1655201146}
   - {fileID: 581456977}
+  tablename: Fail1
   value: []
-  tablename: 
 --- !u!1 &1776504533
 GameObject:
   m_ObjectHideFlags: 0
@@ -10106,10 +10349,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f90848ac9fe78414597f2fb51e56486f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogues:
-  - "Interesante\u2026 has probado tener buen gusto."
-  - "En el siguiente desafio, los dulces no caer\xE1n del cielo\u2026.. asi que preparate"
-  - "HouseLand apenas est\xE1 abriendo sus fauces"
   typingSpeed: 0.08
   waitAfterLine: 1.2
   text: {fileID: 1789350485}
@@ -10117,8 +10356,8 @@ MonoBehaviour:
   - {fileID: 981295263}
   - {fileID: 794760674}
   - {fileID: 535229561}
+  tablename: Win1
   value: []
-  tablename: 
 --- !u!1 &1930240223
 GameObject:
   m_ObjectHideFlags: 0

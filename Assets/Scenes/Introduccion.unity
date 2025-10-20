@@ -606,6 +606,7 @@ GameObject:
   m_Component:
   - component: {fileID: 252561216}
   - component: {fileID: 252561217}
+  - component: {fileID: 252561218}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -725,6 +726,41 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &252561218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 252561215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d18ed12b29a9aa3479eb5083b95f899d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_LocalizedAssetReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:46d2396a42b66f54bb3a62ddf7289aa8
+    m_TableEntryReference:
+      m_KeyId: 5834506240
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+  m_UpdateAsset:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 252561217}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: set_clip
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
 --- !u!1 &506001668
 GameObject:
   m_ObjectHideFlags: 0
@@ -735,6 +771,7 @@ GameObject:
   m_Component:
   - component: {fileID: 506001669}
   - component: {fileID: 506001670}
+  - component: {fileID: 506001671}
   m_Layer: 0
   m_Name: GameObject (1)
   m_TagString: Untagged
@@ -854,6 +891,41 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &506001671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 506001668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d18ed12b29a9aa3479eb5083b95f899d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_LocalizedAssetReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:46d2396a42b66f54bb3a62ddf7289aa8
+    m_TableEntryReference:
+      m_KeyId: 106535550976
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+  m_UpdateAsset:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 506001670}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: set_clip
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
 --- !u!1 &671660670
 GameObject:
   m_ObjectHideFlags: 0
@@ -975,12 +1047,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f90848ac9fe78414597f2fb51e56486f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogues:
-  - "Bienvenido, peque\xF1o mortal... a HouseLand, la casa donde los dulces no se
-    regalan\u2026 \xA1se ganan!"
-  - "Aqui nada es lo que parece. Supera mis pruebas, reune los caramelos\u2026 y
-    tal vez, solo tal vez, salgas de aqui antes de la medianoche."
-  - "Que empiece el juego\u2026 humano."
   typingSpeed: 0.08
   waitAfterLine: 1.2
   text: {fileID: 1454762043}
@@ -988,8 +1054,8 @@ MonoBehaviour:
   - {fileID: 252561217}
   - {fileID: 506001670}
   - {fileID: 2001404462}
+  tablename: Historia
   value: []
-  tablename: 
 --- !u!4 &718621895
 Transform:
   m_ObjectHideFlags: 0
@@ -1439,6 +1505,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1969922354}
   - component: {fileID: 1969922353}
+  - component: {fileID: 1969922355}
   m_Layer: 0
   m_Name: GameManger
   m_TagString: Untagged
@@ -1475,6 +1542,29 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1969922355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1969922352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d18ed12b29a9aa3479eb5083b95f899d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_LocalizedAssetReference:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+  m_UpdateAsset:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &2001404460
 GameObject:
   m_ObjectHideFlags: 0
@@ -1485,6 +1575,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2001404461}
   - component: {fileID: 2001404462}
+  - component: {fileID: 2001404463}
   m_Layer: 0
   m_Name: GameObject (2)
   m_TagString: Untagged
@@ -1604,6 +1695,41 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2001404463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2001404460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d18ed12b29a9aa3479eb5083b95f899d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_LocalizedAssetReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:46d2396a42b66f54bb3a62ddf7289aa8
+    m_TableEntryReference:
+      m_KeyId: 115356172288
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+  m_UpdateAsset:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2001404462}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: set_clip
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
 --- !u!1 &2145775043
 GameObject:
   m_ObjectHideFlags: 0

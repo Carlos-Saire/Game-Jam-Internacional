@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Historia_es
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: es
+  m_SharedData: {fileID: 11400000, guid: 975e510c4ae33884eb66890950e53c45, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 4718512537600
+    m_Localized: "Bienvenido, peque\xF1o mortal... a HouseLand, la casa donde los
+      dulces no se regalan\u2026 \xA1se ganan!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4812519473152
+    m_Localized: "Aqui nada es lo que parece. Supera mis pruebas, reune los caramelos\u2026
+      y tal vez, solo tal vez, salgas de aqui antes de la medianoche."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4847718072320
+    m_Localized: "Que empiece el juego\u2026 humano."
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

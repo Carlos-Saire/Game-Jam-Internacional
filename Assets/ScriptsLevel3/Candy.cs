@@ -23,7 +23,6 @@ namespace Game3
 
         public override void OnClick()
         {
-            Debug.Log("Click caramelo");
             GameManagerLevel3.Instance.AddScore(1);
             audioClipSO.SetPitch();
             audioClipSO.PlayOneShoot();

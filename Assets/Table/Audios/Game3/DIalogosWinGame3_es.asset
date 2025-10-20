@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97269afb30aa84742ae3f3342603618a, type: 3}
+  m_Name: DIalogosWinGame3_es
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: es
+  m_SharedData: {fileID: 11400000, guid: a672a26f06d6cf64c85dfb6c35aeb77a, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 12436340736
+    m_Localized: 7c37a84e2c260064c9e942bddb03474e
+    m_Metadata:
+      m_Items: []
+  - m_Id: 156720398336
+    m_Localized: 6b7912a2765cf1b47a235e6fd240b2a5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 190438408192
+    m_Localized: 6b7912a2765cf1b47a235e6fd240b2a5
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []
