@@ -25,6 +25,13 @@ MonoBehaviour:
     m_ReadOnly: 1
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 22340a8025d2a5742817fc2dc3af3a5d
+    m_Address: Perder Nivel 2 (2)
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    - Locale-es
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 246bdf8eaf767444aaa256d268354197
     m_Address: Assets/Table/Audios/Game1/IntroudccionGame1 Shared Data.asset
     m_ReadOnly: 1
