@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d635a8404fb49474f98bd953db1bc4b9, type: 3}
   m_Name: FantasmaAsustado
   m_EditorClassIdentifier: 
-  audioClip: {fileID: 8300000, guid: 1e28d484fda65ab4288ad3288fadd5d5, type: 3}
+  audioClip: {fileID: 8300000, guid: 048f95f9f3934744ab49d24e2a13aac1, type: 3}
   audioMixerGroup: {fileID: -2974698520008247509, guid: b385de21a38f3e546b6dbe97da80e69c, type: 2}
