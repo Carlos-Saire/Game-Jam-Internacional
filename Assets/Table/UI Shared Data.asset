@@ -63,6 +63,18 @@ MonoBehaviour:
     m_Key: PAUSA
     m_Metadata:
       m_Items: []
+  - m_Id: 147596069011456
+    m_Key: Ganaste
+    m_Metadata:
+      m_Items: []
+  - m_Id: 147706924466176
+    m_Key: Perdiste
+    m_Metadata:
+      m_Items: []
+  - m_Id: 148171045175296
+    m_Key: Siguiente
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

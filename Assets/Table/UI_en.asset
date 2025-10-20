@@ -66,6 +66,22 @@ MonoBehaviour:
     m_Localized: PAUSE
     m_Metadata:
       m_Items: []
+  - m_Id: 147596069011456
+    m_Localized: 'You
+
+      Win'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 147706924466176
+    m_Localized: 'Game
+
+      Over'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 148171045175296
+    m_Localized: Next
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
