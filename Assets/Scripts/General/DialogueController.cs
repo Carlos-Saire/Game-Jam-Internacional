@@ -89,6 +89,10 @@ public class DialogueController : MonoBehaviour
                 text.text += c;
                 yield return new WaitForSecondsRealtime(typingSpeed);
             }
+            while (audiosDialogues[i].isPlaying)
+            {
+                yield return null;
+            }
 
             yield return new WaitForSecondsRealtime(waitAfterLine); 
         }
