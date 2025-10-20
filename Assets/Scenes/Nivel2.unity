@@ -3172,7 +3172,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LocalizedAssetReference:
     m_TableReference:
-      m_TableCollectionName: 
+      m_TableCollectionName: GUID:f99d1adb506904f449b68792b144f9bf
     m_TableEntryReference:
       m_KeyId: 0
       m_Key: 
