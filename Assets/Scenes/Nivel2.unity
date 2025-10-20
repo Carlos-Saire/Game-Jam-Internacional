@@ -449,15 +449,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0242f5c47c20e00478392534501d550f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TimeFreeze: 5
-  MaxTimeFreeze: 5
+  TimeFreeze: 3
+  MaxTimeFreeze: 3
   FirstDestination: {x: -3.71, y: -1.81}
   ScarySprite: {fileID: 5691171096948677276, guid: 2607c4195541c814d876d54a08df65e6, type: 3}
   NormalSprite: {fileID: 6352210501731914947, guid: d7deb7b1d9dde104d9bd9ca07a41fc9a, type: 3}
   scarySound: {fileID: 11400000, guid: cc863df87dd64d440b811d1991c315d0, type: 2}
   startMovementSound: {fileID: 11400000, guid: 7f99fe55ae57e654b9aa13406e2aff59, type: 2}
   startPostition: {x: -8.142, y: -4.3692, z: 0}
-  speedMove: 3
+  speedMove: 4
   trashPrefab: {fileID: 3133171421450933054, guid: 53311fbccfb6d1042a6bb9711571dd42, type: 3}
   stateFlipInitial: 1
 --- !u!212 &43548098
@@ -2955,15 +2955,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0242f5c47c20e00478392534501d550f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TimeFreeze: 5
-  MaxTimeFreeze: 5
+  TimeFreeze: 3
+  MaxTimeFreeze: 3
   FirstDestination: {x: 4.51, y: 0.14}
   ScarySprite: {fileID: 5691171096948677276, guid: 2607c4195541c814d876d54a08df65e6, type: 3}
   NormalSprite: {fileID: 6352210501731914947, guid: d7deb7b1d9dde104d9bd9ca07a41fc9a, type: 3}
   scarySound: {fileID: 11400000, guid: cc863df87dd64d440b811d1991c315d0, type: 2}
   startMovementSound: {fileID: 11400000, guid: 7f99fe55ae57e654b9aa13406e2aff59, type: 2}
   startPostition: {x: 8.02, y: 1.45, z: 0}
-  speedMove: 3
+  speedMove: 4
   trashPrefab: {fileID: 3133171421450933054, guid: 53311fbccfb6d1042a6bb9711571dd42, type: 3}
   stateFlipInitial: 0
 --- !u!212 &873939828
@@ -4507,8 +4507,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -2974698520008247509, guid: b385de21a38f3e546b6dbe97da80e69c, type: 2}
-  m_audioClip: {fileID: 8300000, guid: ce8fe42598b401e4fb70f13805ea80b0, type: 3}
-  m_Resource: {fileID: 8300000, guid: ce8fe42598b401e4fb70f13805ea80b0, type: 3}
+  m_audioClip: {fileID: 8300000, guid: bc20ff6dd84a3fe4d961f8410f8f3980, type: 3}
+  m_Resource: {fileID: 8300000, guid: bc20ff6dd84a3fe4d961f8410f8f3980, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -4891,15 +4891,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0242f5c47c20e00478392534501d550f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TimeFreeze: 5
-  MaxTimeFreeze: 5
+  TimeFreeze: 3
+  MaxTimeFreeze: 3
   FirstDestination: {x: 4.82, y: -2.9}
   ScarySprite: {fileID: 5691171096948677276, guid: 2607c4195541c814d876d54a08df65e6, type: 3}
   NormalSprite: {fileID: 6352210501731914947, guid: d7deb7b1d9dde104d9bd9ca07a41fc9a, type: 3}
   scarySound: {fileID: 11400000, guid: cc863df87dd64d440b811d1991c315d0, type: 2}
   startMovementSound: {fileID: 11400000, guid: 7f99fe55ae57e654b9aa13406e2aff59, type: 2}
   startPostition: {x: 8.2796, y: -4.4175, z: 0}
-  speedMove: 3
+  speedMove: 4
   trashPrefab: {fileID: 3133171421450933054, guid: 53311fbccfb6d1042a6bb9711571dd42, type: 3}
   stateFlipInitial: 0
 --- !u!212 &1518751953
@@ -5666,15 +5666,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0242f5c47c20e00478392534501d550f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TimeFreeze: 5
-  MaxTimeFreeze: 5
+  TimeFreeze: 3
+  MaxTimeFreeze: 3
   FirstDestination: {x: -4.86, y: 2.13}
   ScarySprite: {fileID: 5691171096948677276, guid: 2607c4195541c814d876d54a08df65e6, type: 3}
   NormalSprite: {fileID: 6352210501731914947, guid: d7deb7b1d9dde104d9bd9ca07a41fc9a, type: 3}
   scarySound: {fileID: 11400000, guid: cc863df87dd64d440b811d1991c315d0, type: 2}
   startMovementSound: {fileID: 11400000, guid: 7f99fe55ae57e654b9aa13406e2aff59, type: 2}
   startPostition: {x: -8.142, y: 1.6, z: 0}
-  speedMove: 3
+  speedMove: 4
   trashPrefab: {fileID: 3133171421450933054, guid: 53311fbccfb6d1042a6bb9711571dd42, type: 3}
   stateFlipInitial: 1
 --- !u!212 &1800650301
