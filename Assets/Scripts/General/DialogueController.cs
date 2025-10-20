@@ -72,7 +72,17 @@ public class DialogueController : MonoBehaviour
             text.text = "";
 
             if (i < audiosDialogues.Length && audiosDialogues[i] != null)
+            {
+                while (audiosDialogues[i].clip == null)
+                {
+                    print(audiosDialogues[i].clip);
+                    yield return null;
+                }
+                print(audiosDialogues[i].clip);
+
                 audiosDialogues[i].Play();
+
+            }
 
             foreach (char c in value[i])
             {
