@@ -20,8 +20,23 @@ MonoBehaviour:
     m_ReadOnly: 1
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 17864ae62b9702948b8cd5cc7ed0199f
+    m_Address: Assets/Table/Fail/Game2/FailGame2 Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 246bdf8eaf767444aaa256d268354197
+    m_Address: Assets/Table/Audios/Game1/IntroudccionGame1 Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 33bf37af8eeda9249b30d783fa6b26fc
     m_Address: Assets/Table/Win/Game1/Win1 Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 38c60093a3a1c274c98060d9acbfd94f
+    m_Address: Assets/Table/Introduccion/Game2/IntroduccionGame2 Shared Data.asset
     m_ReadOnly: 1
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -50,6 +65,11 @@ MonoBehaviour:
     m_ReadOnly: 1
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6575c98a5d06a44469a0b987a9234ea9
+    m_Address: Assets/Table/TutorialGame2 Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 66b507848ce86ff44b9ab4e54f8c1edf
     m_Address: Assets/Table/Win/Game3/Win3 Shared Data.asset
     m_ReadOnly: 1
@@ -62,6 +82,11 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 975e510c4ae33884eb66890950e53c45
     m_Address: Assets/Table/Historia/Historia Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 97d11f24ec8988148ba562223a2c0a08
+    m_Address: Assets/Table/Win/Game2/WInGame2 Shared Data.asset
     m_ReadOnly: 1
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

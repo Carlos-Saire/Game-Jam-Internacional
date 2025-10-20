@@ -21,6 +21,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-es
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1125cd3f26775804198ce566b1e265ae
+    m_Address: TutorialGame2_es
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-es
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 21ac0c1734826ca45a8f592ac3dbbfa3
     m_Address: Introduccion1_es
     m_ReadOnly: 1
@@ -51,6 +57,18 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-es
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5793ac32305411e4382848f9f350d6b7
+    m_Address: WInGame2_es
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-es
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 72e24e1a29c172643b20533fc64aa74d
+    m_Address: IntroduccionGame2_es
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-es
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 82c31ed3ea8f7374b899ad5694fb0258
     m_Address: Win3_es
     m_ReadOnly: 1
@@ -77,6 +95,12 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: e3ef572bc22741d46bfaf557ae8c3565
     m_Address: Fail3_es
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-es
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fe44d8b489a190c41ad3296344f80cfe
+    m_Address: FailGame2_es
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-es

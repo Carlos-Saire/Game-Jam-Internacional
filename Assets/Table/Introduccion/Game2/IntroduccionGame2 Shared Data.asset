@@ -10,19 +10,35 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
-  m_Name: IntroudccionGame1 Shared Data
+  m_Name: IntroduccionGame2 Shared Data
   m_EditorClassIdentifier: 
-  m_TableCollectionName: IntroudccionGame1
-  m_TableCollectionNameGuidString: 246bdf8eaf767444aaa256d268354197
-  m_Entries: []
+  m_TableCollectionName: IntroduccionGame2
+  m_TableCollectionNameGuidString: 38c60093a3a1c274c98060d9acbfd94f
+  m_Entries:
+  - m_Id: 39548321792
+    m_Key: IG2P1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 221237182464
+    m_Key: IG2P2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 381388292096
+    m_Key: IG2P3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 566709420032
+    m_Key: IG2P4
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
-    rid: 101930676429521184
+    rid: 101930676429521213
   references:
     version: 2
     RefIds:
-    - rid: 101930676429521184
+    - rid: 101930676429521213
       type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
       data:
-        m_CustomEpoch: 1760921033848
+        m_CustomEpoch: 1760922570304

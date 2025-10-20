@@ -33,6 +33,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-es
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 768599b53421563478f99629f1108d2b
+    m_Address: IntroudccionGame1_es
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-es
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 8df6f74f08a11484f9b22500bf0f484a
     m_Address: DIalogosIntroduccionGame3_es
     m_ReadOnly: 1

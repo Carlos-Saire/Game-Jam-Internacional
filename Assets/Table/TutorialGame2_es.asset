@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: TutorialGame2_es
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: es
+  m_SharedData: {fileID: 11400000, guid: 6575c98a5d06a44469a0b987a9234ea9, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 8057487360
+    m_Localized: 'Click derecho: Recoger caramelos / asustar fantasmas'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 131831398400
+    m_Localized: 'Click izquierdo: Colocar caramelos dentro de la calabaza'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 172616810496
+    m_Localized: '- Recolecta todos los caramelos del suelo antes de que sean demasiados.
+
+'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 221656612864
+    m_Localized: '- Coloca los caramelos dentro de la calabaza en el medio del escenario.
+      (Solo puedes llevar 3 caramelos a la vez)'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 320306642944
+    m_Localized: '- Asusta a los fantasmas antes de que sigan desparramando caramelos.'
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

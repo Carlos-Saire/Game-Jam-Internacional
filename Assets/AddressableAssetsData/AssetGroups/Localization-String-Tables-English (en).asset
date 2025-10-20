@@ -21,6 +21,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-en
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 06432877a9c8ca54e8991cddcbcb633f
+    m_Address: TutorialGame2_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 1cbd31ba4cc941f409ff8aca4a81d82d
     m_Address: Prueba_en
     m_ReadOnly: 1
@@ -39,8 +45,20 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-en
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 390ca731470c8b94688760cfb869e14e
+    m_Address: WInGame2_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 4446f42a1a884134482b5b8c81c516fb
     m_Address: Creditos_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7361af680e6107040bc041464a1b7805
+    m_Address: IntroduccionGame2_en
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-en
@@ -53,6 +71,12 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 8ffaa665faba91b4ebd81cf10c1fd049
     m_Address: Historia_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a3fa4af9475fb9a4ca08b13cd8ee0c2e
+    m_Address: FailGame2_en
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-en

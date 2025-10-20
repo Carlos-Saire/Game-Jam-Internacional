@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: IntroduccionGame2_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: 38c60093a3a1c274c98060d9acbfd94f, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 39548321792
+    m_Localized: So you survived the first feast... interesting... Be careful of
+      the ghosts.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 221237182464
+    m_Localized: "\rThey hate it when you steal their treats, but you can scare them
+      away if you use the right trick."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 381388292096
+    m_Localized: "\rAnd don't be so greedy...if you let your candy bar get too full,"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 566709420032
+    m_Localized: "\rThe house will think you are one of its own... and will devour
+      you with gusto..."
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

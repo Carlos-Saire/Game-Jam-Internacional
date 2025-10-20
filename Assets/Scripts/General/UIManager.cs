@@ -3,6 +3,7 @@ using UnityEngine.UI;
 using UnityEngine.Events;
 using DG.Tweening;
 using System;
+using UnityEngine.SceneManagement;
 public class UIManager : MonoBehaviour
 {
     [Header("CanvasGroup")]
@@ -195,9 +196,12 @@ public class UIManager : MonoBehaviour
     }
     private void CheckButtonReboot()
     {
-        for(int i = 0; i < buttonsReboot.Length; ++i)
+        if (SceneManager.GetActiveScene().name != "Game1")
         {
-            buttonsReboot[i].interactable = GameManager.instance.CountSweet > 0;
+            for (int i = 0; i < buttonsReboot.Length; ++i)
+            {
+                buttonsReboot[i].interactable = GameManager.instance.CountSweet > 0;
+            }
         }
     }
     #region ButtonsListener
