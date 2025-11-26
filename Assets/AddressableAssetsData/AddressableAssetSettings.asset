@@ -15,7 +15,7 @@ MonoBehaviour:
   m_DefaultGroup: 4b48e51f460f0214086f5ff50e11541e
   m_currentHash:
     serializedVersion: 2
-    Hash: d2e4e0a07edc403297a95f2ce7ce336d
+    Hash: 00000000000000000000000000000000
   m_OptimizeCatalogSize: 0
   m_BuildRemoteCatalog: 0
   m_CatalogRequestsTimeout: 0
@@ -40,7 +40,7 @@ MonoBehaviour:
   m_BundleRetryCount: 0
   m_BundleRedirectLimit: -1
   m_SharedBundleSettings: 0
-  m_SharedBundleSettingsCustomGroupIndex: 0
+  m_SharedBundleSettingsCustomGroupIndex: 2
   m_ContiguousBundles: 1
   m_StripUnityVersionFromBundleBuild: 0
   m_DisableVisibleSubAssetRepresentations: 0
@@ -53,7 +53,7 @@ MonoBehaviour:
     m_Id: 
   m_RemoteCatalogLoadPath:
     m_Id: 
-  m_ContentStateBuildPathProfileVariableName: 
+  m_ContentStateBuildPathProfileVariableName: <default settings path>
   m_CustomContentStateBuildPath: 
   m_ContentStateBuildPath: 
   m_BuildAddressablesWithPlayerBuild: 0
@@ -85,6 +85,20 @@ MonoBehaviour:
         m_Value: '[UnityEditor.EditorUserBuildSettings.activeBuildTarget]'
       - m_Id: 9fb37eada877fea4e9b60a1dace16a82
         m_Value: <undefined>
+      - m_Id: da8e95bd50fd4ad46b0e7aa332d3c137
+        m_Value: '[UnityEngine.AddressableAssets.Addressables.BuildPath]/[BuildTarget]'
+    - m_InheritedParent: 
+      m_Id: 7e96cdae7cb628f47a4a62131ea73ec4
+      m_ProfileName: WebGL
+      m_Values:
+      - m_Id: 0489614cf7a03f643bf8f13fff0d596f
+        m_Value: '[UnityEngine.AddressableAssets.Addressables.BuildPath]/WebGL'
+      - m_Id: 88029817bd15fdb40a75f6db4ef2cf41
+        m_Value: '{UnityEngine.AddressableAssets.Addressables.RuntimePath}/[BuildTarget]'
+      - m_Id: 8840cdc6279b1934290422d3f78ff3cd
+        m_Value: '[UnityEditor.EditorUserBuildSettings.activeBuildTarget]'
+      - m_Id: 9fb37eada877fea4e9b60a1dace16a82
+        m_Value: '[UnityEngine.AddressableAssets.Addressables.RuntimePath]/WebGL'
       - m_Id: da8e95bd50fd4ad46b0e7aa332d3c137
         m_Value: '[UnityEngine.AddressableAssets.Addressables.BuildPath]/[BuildTarget]'
     m_ProfileEntryNames:
@@ -122,4 +136,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 3ade24eb9747eee46826fa51677c5ec0, type: 2}
   - {fileID: 11400000, guid: 91b175d7f8f4d7642b25e65e31002613, type: 2}
   - {fileID: 11400000, guid: 233b8994747c28748b442b20d4e7ca76, type: 2}
-  m_ActiveProfileId: 642b2ff0d4267c54184e4a0bff9d8841
+  m_ActiveProfileId: 7e96cdae7cb628f47a4a62131ea73ec4
