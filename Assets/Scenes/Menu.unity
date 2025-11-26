@@ -875,7 +875,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &836458345
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2241,13 +2241,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f90848ac9fe78414597f2fb51e56486f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogues: []
   typingSpeed: 0.08
   waitAfterLine: 1.2
   text: {fileID: 0}
   audiosDialogues: []
-  value: []
   tablename: PapitaCaliente
+  value: []
 --- !u!4 &1449264019
 Transform:
   m_ObjectHideFlags: 0
