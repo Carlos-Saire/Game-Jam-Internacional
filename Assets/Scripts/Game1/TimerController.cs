@@ -1,4 +1,5 @@
 using System;
+using System.Runtime.InteropServices;
 using TMPro;
 using UnityEngine;
 namespace Game1
@@ -13,6 +14,8 @@ namespace Game1
         private float currentTime;
         private bool isGameFast;
         private bool isFinish;
+        [DllImport("__Internal")]
+        private static extern void SetTime(string text);
         protected override void OnEnable()
         {
             base.OnEnable();
@@ -25,19 +28,25 @@ namespace Game1
         }
         private void Awake()
         {
-            text = GetComponent<TMP_Text>();
         }
         private void Start()
         {
             currentTime = initTime;
-            text.text = "Tiempo: " + (int)currentTime;
+            string gaaa = "Tiempo: " + (int)currentTime;
+            #if UNITY_WEBGL && !UNITY_EDITOR
+                        SetTime(gaaa);
+            #endif
         }
         private void Update()
         {
             if (!isStartGame || isFinish) return;
 
             currentTime -= Time.deltaTime;
-            text.text = "Tiempo: " +((int)currentTime).ToString();
+
+            string gaaa = "Tiempo: " +((int)currentTime).ToString();
+            #if UNITY_WEBGL && !UNITY_EDITOR
+                                    SetTime(gaaa);
+            #endif
 
             if (!isGameFast && currentTime <= 30 && currentTime > 0)
             {
@@ -53,7 +62,10 @@ namespace Game1
             {
                 isFinish = true;
                 currentTime = 0;
-                text.text = "0";
+                string gaaaa = "0";
+                #if UNITY_WEBGL && !UNITY_EDITOR
+                          SetTime(gaaaa);
+                #endif
                 OnGameFinish?.Invoke();
             }
         }

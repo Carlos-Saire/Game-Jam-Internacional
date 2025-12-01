@@ -1,3 +1,4 @@
+using System.Runtime.InteropServices;
 using TMPro;
 using UnityEngine;
 namespace Game1
@@ -7,14 +8,21 @@ namespace Game1
     {
         private TMP_Text text;
         private int currentScore;
+
+        [DllImport("__Internal")]
+        private static extern void SetCandys(string text);
         private void Awake()
         {
-            text = GetComponent<TMP_Text>();
         }
         private void Start()
         {
             currentScore = 0;
-            text.text = "Puntos: " + currentScore +"/70" ;
+            string gaaa = "Puntos: " + currentScore + "/70";
+                #if UNITY_WEBGL && !UNITY_EDITOR
+                                       
+                   SetCandys(gaaa);
+                #endif
+
         }
         [SerializeField] private ScoreSO score;
         private void OnEnable()
@@ -28,7 +36,11 @@ namespace Game1
         private void UpdateScore(int score)
         {
             currentScore += score;
-            text.text = "Puntos: " + currentScore + "/70";
+            string gaaa = "Puntos: " + currentScore + "/70";
+            #if UNITY_WEBGL && !UNITY_EDITOR
+                                       
+                       SetCandys(gaaa);
+            #endif
             this.score.Score = currentScore;
         }
     }

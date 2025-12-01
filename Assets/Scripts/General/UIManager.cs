@@ -221,9 +221,20 @@ public class UIManager : MonoBehaviour
         }
     }
     #region ButtonsListener
-    private void OnClickPause() => MovePanel(panelPause, Vector2.zero, easePause, timePause);
-    private void OnClickDoubt() => MovePanel(panelDoubt, Vector2.zero, easeDoubt, timeDoubt);
-    private void OnClickSettings() => MovePanel(panelSettings, Vector2.zero, easeSettings, timeSettings);
+    public void OnClickPause()
+    {
+        MovePanel(panelPause, Vector2.zero, easePause, timePause);
+    }
+    
+    public void OnClickDoubt()
+    {
+        MovePanel(panelDoubt, Vector2.zero, easeDoubt, timeDoubt);
+    }
+
+    public void OnClickSettings()
+    {
+        MovePanel(panelSettings, Vector2.zero, easeSettings, timeSettings);
+    }
     private void OnClickBackPause() => MovePanel(panelPause, initPositionPause, easePause, timePause, DefaulTime);
     private void OnClickBackDoubt() 
     {

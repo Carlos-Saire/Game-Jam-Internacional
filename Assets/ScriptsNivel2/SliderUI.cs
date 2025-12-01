@@ -1,16 +1,19 @@
 using System;
+using System.Runtime.InteropServices;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class SliderUI : MonoBehaviour
 {
-    [SerializeField] private Slider barraCaramelos;
 
+    [SerializeField] private int currentCandies;
+    [SerializeField] private int maxCandies;
 
     public static event Action OnBarFull;
     public static event Action OnBarEmpty;
 
-
+    [DllImport("__Internal")]
+    private static extern void SetCandys(string text);
 
     private void OnEnable()
     {
@@ -29,17 +32,26 @@ public class SliderUI : MonoBehaviour
 
     void AddTrushAtSlider()
     {
-        barraCaramelos.value++;
-        if (barraCaramelos.value == barraCaramelos.maxValue)
+         currentCandies++;
+        string gaaa = "Dulces: " + currentCandies + "/"+ maxCandies;
+        #if UNITY_WEBGL && !UNITY_EDITOR
+                    
+                                    SetCandys(gaaa);
+        #endif
+        if (currentCandies >= maxCandies)
         {
             OnBarFull?.Invoke();
         }
     }
 
     void DeleteTrushAtSlider()
-    {
-        barraCaramelos.value--;
-        if (barraCaramelos.value == barraCaramelos.minValue)
+    {   currentCandies--;
+        string gaaa = "Dulces: " + currentCandies + "/" + maxCandies;
+        #if UNITY_WEBGL && !UNITY_EDITOR
+                    
+                                            SetCandys(gaaa);
+        #endif
+        if (currentCandies <=0)
         {
             OnBarEmpty?.Invoke();
         }
@@ -47,6 +59,10 @@ public class SliderUI : MonoBehaviour
 
     void SetValueBar(int value)
     {
-        barraCaramelos.value = value;
+        currentCandies= value;
+        string gaaa = "Dulces: " + currentCandies + "/" + maxCandies;
+        #if UNITY_WEBGL && !UNITY_EDITOR
+                      SetCandys(gaaa);
+        #endif
     }
 }

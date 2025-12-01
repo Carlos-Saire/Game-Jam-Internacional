@@ -1,3 +1,4 @@
+using System.Runtime.InteropServices;
 using TMPro;
 using UnityEngine;
 namespace Game3
@@ -8,10 +9,7 @@ namespace Game3
 
         public AudioSource backgroundMusic;
 
-        [Header("UI")]
-        public TextMeshProUGUI scoreText;
-        public TextMeshProUGUI lifeText;
-        public TextMeshProUGUI timerText;
+ 
 
         [Header("Game Settings")]
         public byte totalCandies = 10;
@@ -24,6 +22,16 @@ namespace Game3
         [Header("Game States")]
         [SerializeField] public bool gameStarted = false;
         [SerializeField] public bool gameEnded = false;
+
+
+        [DllImport("__Internal")]
+        private static extern void SetTime(string text);
+
+        [DllImport("__Internal")]
+        private static extern void SetCandys(string text);
+
+        [DllImport("__Internal")]
+        private static extern void SetLife(string text);
 
         private void Awake()
         {
@@ -42,7 +50,10 @@ namespace Game3
         {
             remainingTime = gameTime;
             UpdateTexts();
-            timerText.text = "Time: " + Mathf.Ceil(remainingTime);
+            string tiempo = "Time: " + Mathf.Ceil(remainingTime);
+            #if UNITY_WEBGL && !UNITY_EDITOR
+                        SetTime(tiempo);
+            #endif
         }
         private void Update()
         {
@@ -59,12 +70,22 @@ namespace Game3
                 EndGame(false);
             }
 
-            timerText.text = "Tiempo: " + Mathf.Ceil(remainingTime);
+            string tiempo = "Tiempo: " + Mathf.Ceil(remainingTime);
+            #if UNITY_WEBGL && !UNITY_EDITOR
+                                    SetTime(tiempo);
+            #endif
         }
         private void UpdateTexts()
         {
-            scoreText.text = "Caramelos: " + score + "/" + totalCandies;
-            lifeText.text = "Salud: " + playerLives;
+            string caramelo = "Caramelos: " + score + "/" + totalCandies;
+            #if UNITY_WEBGL && !UNITY_EDITOR
+                        
+                        SetCandys(caramelo);
+            #endif
+            string vida = "Salud: " + playerLives;
+            #if UNITY_WEBGL && !UNITY_EDITOR
+                        SetLife(vida);
+            #endif
         }
         public void AddScore(int amount)
         {
@@ -96,7 +117,10 @@ namespace Game3
             remainingTime = gameTime;
 
             backgroundMusic.Play();
-            timerText.text = "Time: " + Mathf.Ceil(remainingTime);
+            string tiempo = "Time: " + Mathf.Ceil(remainingTime);
+            #if UNITY_WEBGL && !UNITY_EDITOR
+                                    SetTime(tiempo);
+            #endif
         }
         private void EndGame(bool win)
         {
@@ -109,10 +133,30 @@ namespace Game3
             if(win)
             {
                 GameManager.instance.Win();
+#if UNITY_WEBGL && !UNITY_EDITOR
+                                                    SetTime("");
+#endif
+#if UNITY_WEBGL && !UNITY_EDITOR
+                        SetLife("");
+#endif
+#if UNITY_WEBGL && !UNITY_EDITOR
+                        
+                        SetCandys("");
+#endif
             }
             else
             {
                 GameManager.instance.Fail();
+#if UNITY_WEBGL && !UNITY_EDITOR
+                                                    SetTime("");
+#endif
+#if UNITY_WEBGL && !UNITY_EDITOR
+                        SetLife("");
+#endif
+#if UNITY_WEBGL && !UNITY_EDITOR
+                        
+                        SetCandys("");
+#endif
             }
         }
     }
