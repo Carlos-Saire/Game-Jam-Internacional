@@ -62,7 +62,7 @@ namespace Game1
             {
                 isFinish = true;
                 currentTime = 0;
-                string gaaaa = "0";
+                string gaaaa = "Tiempo: 0";
                 #if UNITY_WEBGL && !UNITY_EDITOR
                           SetTime(gaaaa);
                 #endif
