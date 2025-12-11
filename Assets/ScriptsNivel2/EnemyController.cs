@@ -5,9 +5,10 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class EnemyController : StartableEntity,IAuditable
+public class EnemyController : StartableEntity, IAuditable
 {
     Rigidbody2D _compRigidbody2D;
+
     [SerializeField] float TimeFreeze;
     [SerializeField] float MaxTimeFreeze;
     [SerializeField] Vector2 FirstDestination;
@@ -15,9 +16,10 @@ public class EnemyController : StartableEntity,IAuditable
     [SerializeField] Sprite NormalSprite;
     [SerializeField] AudioClipSO scarySound;
     [SerializeField] AudioClipSO startMovementSound;
-    Vector2 PositionToMove;
+
     [SerializeField] Vector3 startPostition;
     [SerializeField] float speedMove;
+
     public static event Action OnTimeisOver;
     public static event Action OnCreateTrush;
 
@@ -29,6 +31,11 @@ public class EnemyController : StartableEntity,IAuditable
     private bool hasReachedInitialPosition = false;
     private bool hasPlayedStartSound = false;
 
+    private NodeControll targetNode = null;   // nodo objetivo real
+    private NodeControll currentNode = null;  // nodo actual
+
+    private Vector2 PositionToMove; // destino en vector2
+
     private void Awake()
     {
         _compRigidbody2D = GetComponent<Rigidbody2D>();
@@ -38,10 +45,9 @@ public class EnemyController : StartableEntity,IAuditable
     private void Start()
     {
         transform.position = startPostition;
-        PositionToMove = FirstDestination;
+        PositionToMove = FirstDestination; // Destino inicial
         hasReachedInitialPosition = false;
         isReturning = false;
-        ActivateEnemys();
     }
 
     protected override void OnEnable()
@@ -60,6 +66,7 @@ public class EnemyController : StartableEntity,IAuditable
     {
         if (!isStartGame) return;
 
+        // GHOST VOLVIENDO
         if (TimeFreeze > 0)
         {
             isReturning = true;
@@ -76,8 +83,10 @@ public class EnemyController : StartableEntity,IAuditable
                 sprite.flipX = stateFlipInitial;
                 sprite.sprite = NormalSprite;
                 hasReachedInitialPosition = true;
-                hasPlayedStartSound = false; // Se reinicia para poder reproducir el sonido luego
+                hasPlayedStartSound = false;
             }
+
+            return;
         }
         else if (TimeFreeze <= 0 && hasReachedInitialPosition)
         {
@@ -91,10 +100,20 @@ public class EnemyController : StartableEntity,IAuditable
             }
         }
 
-
+        // Movimiento normal
         if (!isReturning)
         {
             MoveTo(PositionToMove);
+
+            // Verificación de proximidad para evitar quedarse pegado
+            if (targetNode != null)
+            {
+                float dist = Vector2.Distance(transform.position, targetNode.transform.position);
+                if (dist < 0.05f)  // margen pequeño
+                {
+                    HandleCorrectNode(targetNode);
+                }
+            }
         }
     }
 
@@ -103,28 +122,24 @@ public class EnemyController : StartableEntity,IAuditable
         transform.position = Vector2.MoveTowards(transform.position, destination, speedMove * Time.deltaTime);
     }
 
-    void ActivateEnemys()
+    public void SetNewNode(NodeControll newNode)
     {
-        if (TimeFreeze <= 0 && hasReachedInitialPosition)
-        {
-            OnTimeisOver?.Invoke();
-        }
-    }
+        if (newNode == null) return;
 
-    public void SetNewPosition(Vector2 newPosition)
-    {
-        if (transform.position.x < newPosition.x)
+        targetNode = newNode;
+        PositionToMove = newNode.transform.position;
+
+        if (transform.position.x < PositionToMove.x)
             sprite.flipX = true;
-        else if (transform.position.x > newPosition.x)
+        else if (transform.position.x > PositionToMove.x)
             sprite.flipX = false;
-
-        PositionToMove = newPosition;
     }
 
     void ScaryGhost()
     {
         Vector2 mousePos = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
         RaycastHit2D hit = Physics2D.Raycast(mousePos, Vector2.zero);
+
         if (hit.collider != null && hit.collider.CompareTag("Ghost"))
         {
             EnemyController ghost = hit.collider.GetComponent<EnemyController>();
@@ -139,34 +154,45 @@ public class EnemyController : StartableEntity,IAuditable
         }
     }
 
-    public void PlayMusic(AudioClipSO audio) { 
-    
-    audio.PlayOneShoot();    
+    public void PlayMusic(AudioClipSO audio)
+    {
+        audio.PlayOneShoot();
     }
-
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (!collision.CompareTag("Node"))
+            return;
 
-        if (collision.CompareTag("Node") )
+        currentNode = collision.GetComponent<NodeControll>();
+
+        // Primer contacto se convierte en su ruta
+        if (targetNode == null)
         {
-
-
-            int numberMagic = UnityEngine.Random.Range(0, 101);
-            if (numberMagic <= 17)
-            {
-                OnCreateTrush?.Invoke();
-                Instantiate(trashPrefab, transform.position, Quaternion.identity);
-            }
-
-
-            NodeControll currentNode = collision.GetComponent<NodeControll>();
-            NodeControll nextNode = currentNode.GetAdjacentNode();
-
-            if (nextNode != null)
-            {
-                SetNewPosition(nextNode.transform.position);
-            }
+            HandleCorrectNode(currentNode);
+            return;
         }
+
+        // Si no es el nodo objetivo real, ignorar
+        if (currentNode != targetNode)
+            return;
+
+        HandleCorrectNode(currentNode);
+    }
+
+    void HandleCorrectNode(NodeControll currentNode)
+    {
+        // BASURA RANDOM
+        int numberMagic = UnityEngine.Random.Range(0, 101);
+        if (numberMagic <= 17)
+        {
+            OnCreateTrush?.Invoke();
+            Instantiate(trashPrefab, transform.position, Quaternion.identity);
+        }
+
+        // SIGUIENTE NODO
+        NodeControll nextNode = currentNode.GetAdjacentNode();
+        if (nextNode != null)
+            SetNewNode(nextNode);
     }
 }

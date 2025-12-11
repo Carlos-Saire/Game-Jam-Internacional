@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Globalization;
 
 
 public class GraphMapController : MonoBehaviour
@@ -27,12 +28,16 @@ public class GraphMapController : MonoBehaviour
     void OnDrawGraph()
     {
         GameObject currentNode;
-        arrayNodeRows = GraphMap.text.Split('\n');
+        arrayNodeRows = GraphMap.text.Split(new char[] { '\n', '\r' }, System.StringSplitOptions.RemoveEmptyEntries);
         for (int i = 0; i < arrayNodeRows.Length; i++)
         {
+            if (string.IsNullOrWhiteSpace(arrayNodeRows[i])) continue;
             arrayNodeColumns = arrayNodeRows[i].Split(";");
-            currentNode = Instantiate(NodePrefab, new Vector2(float.Parse(arrayNodeColumns[0]),
-                float.Parse(arrayNodeColumns[1])), transform.rotation);
+            string xString = arrayNodeColumns[0].Replace(',', '.').Trim();
+            string yString = arrayNodeColumns[1].Replace(',', '.').Trim();
+            float xPos = float.Parse(xString, CultureInfo.InvariantCulture);
+            float yPos = float.Parse(yString, CultureInfo.InvariantCulture);
+            currentNode = Instantiate(NodePrefab, new Vector2(xPos, yPos), transform.rotation);
             currentNode.name = "NODE" + i.ToString();
             ListNodes.AddAtEnd(currentNode.GetComponent<NodeControll>());
             currentNode.transform.SetParent(transform);
@@ -42,44 +47,23 @@ public class GraphMapController : MonoBehaviour
 
     void ConnectNodes()
     {
-
-        arrayNodeConnectionsRows = ConnectionsMap.text.Split("\n");
+        arrayNodeConnectionsRows = ConnectionsMap.text.Split(new char[] { '\n', '\r' }, System.StringSplitOptions.RemoveEmptyEntries);
         for (int i = 0; i < ListNodes.GetCount(); i++)
         {
-            arrayNodeConnectionsColums = arrayNodeConnectionsRows[i].Split(";");
-            for (int j = 0; j < arrayNodeConnectionsColums.Length - 1; j++)
+            if (i >= arrayNodeConnectionsRows.Length) break;
+
+            arrayNodeConnectionsColums = arrayNodeConnectionsRows[i].Split(';');
+
+            for (int j = 0; j < arrayNodeConnectionsColums.Length; j++)
             {
-                ListNodes.GetValueAtPosition(i).AddAdjacentNode(ListNodes.GetValueAtPosition(int.Parse(arrayNodeConnectionsColums[j])));
+                string indexStr = arrayNodeConnectionsColums[j].Trim();
+                if (!string.IsNullOrEmpty(indexStr))
+                {
+                    ListNodes.GetValueAtPosition(i).AddAdjacentNode(ListNodes.GetValueAtPosition(int.Parse(indexStr)));
+                }
             }
 
         }
     }
-    void SetInitialNode()
-    {
-        for (int i = 0; i < arrayEnemys.Length; i++)
-        {
-            if (arrayEnemys[i].gameObject.tag == "Enemy1")
-            {
-                //int position = Random.Range(0, ListNodes.GetCount());
-                arrayEnemys[i].SetNewPosition(ListNodes.GetValueAtPosition(23).gameObject.transform.position);
-            }
-            else if (arrayEnemys[i].gameObject.tag == "Enemy2")
-            {
-                arrayEnemys[i].SetNewPosition(ListNodes.GetValueAtPosition(27).gameObject.transform.position);
-            }
-        }
-    }
 
-
-    private void OnEnable()
-    {
-        EnemyController.OnTimeisOver += SetInitialNode;
-    }
-
-    private void OnDisable()
-    {
-        EnemyController.OnTimeisOver -= SetInitialNode;
-    }
 }
-
-
