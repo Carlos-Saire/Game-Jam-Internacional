@@ -2,24 +2,20 @@
 using UnityEngine;
 namespace Game3
 {
-    public class Pumpkin : ClickableItem
+    public class Pumpkin : ClickableItem,IAuditable
     {
-        public AudioSource audioSource;
         public GameObject effectprefab;
+        public AudioClipSO calabazaSound;
         private float lifeTime = 7f;
 
         protected override void Start()
         {
-            audioSource = GetComponent<AudioSource>();
+            
 
             base.Start();
             moveSpeed = 8f;
 
-            if (audioSource != null)
-            {
-                audioSource.pitch = Random.Range(0.7f, 1.4f);
-                audioSource.Play();
-            }
+            
 
             Destroy(gameObject, lifeTime); 
         }
@@ -27,11 +23,16 @@ namespace Game3
         public override void OnClick()
         {
             GameManagerLevel3.Instance.ReduceLife(1);
-
             GameObject trick = Instantiate(effectprefab, transform.position, Quaternion.identity);
+            PlayMusic(calabazaSound);
             Destroy(trick,0.5f);
 
             Destroy(gameObject);
+        }
+
+        public void PlayMusic(AudioClipSO audio)
+        {
+            audio.PlayOneShoot();
         }
     }
 }

@@ -39,6 +39,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &101864436262565175
 SpriteRenderer:
+  serializedVersion: 2
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -57,6 +58,8 @@ SpriteRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -78,9 +81,11 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -398021443
   m_SortingLayer: 2
   m_SortingOrder: 1
+  m_MaskInteraction: 0
   m_Sprite: {fileID: 1341312415467910784, guid: cc64d28c0f81fe743b53b668ca79fff4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -90,7 +95,6 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!61 &1850288391398805172
 BoxCollider2D:
@@ -150,8 +154,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0dc245b22820b547bc79a3d73a4c383, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioSource: {fileID: 0}
   effectprefab: {fileID: 2203356555750546567, guid: 274113bb40b480145b55aefad1f0efa1, type: 3}
+  calabazaSound: {fileID: 11400000, guid: 2c8fdb082ec690f4184fe2e19406cbf1, type: 2}
 --- !u!50 &5201957698172711835
 Rigidbody2D:
   serializedVersion: 5
@@ -211,7 +215,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -2974698520008247509, guid: b385de21a38f3e546b6dbe97da80e69c, type: 2}
-  m_audioClip: {fileID: 8300000, guid: 1e28d484fda65ab4288ad3288fadd5d5, type: 3}
+  m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 1e28d484fda65ab4288ad3288fadd5d5, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.2

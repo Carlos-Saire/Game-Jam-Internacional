@@ -3094,7 +3094,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2848856860318296675, guid: a31e13fcdf7f22349b59843dfc9a75cb, type: 3}
       propertyPath: m_fontSize
-      value: 53.25
+      value: 72
       objectReference: {fileID: 0}
     - target: {fileID: 3572957446391628228, guid: a31e13fcdf7f22349b59843dfc9a75cb, type: 3}
       propertyPath: m_IsActive
@@ -3307,7 +3307,7 @@ SpriteRenderer:
   m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -5518026781542679504, guid: 3b54e1b4d7b62034db80462e47f7adca, type: 3}
+  m_Sprite: {fileID: -9100105516475449204, guid: 84f59feda19e842498d00edc71d4d0e3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3347,6 +3347,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 4
   xLimit: {x: -8, y: 8}
+  goodSprite: {fileID: -5518026781542679504, guid: 3b54e1b4d7b62034db80462e47f7adca, type: 3}
+  badSprite: {fileID: 3199710391044083888, guid: 1fffacf048edb1040a71d6c65a1464a7, type: 3}
+  neutralSprite: {fileID: -9100105516475449204, guid: 84f59feda19e842498d00edc71d4d0e3, type: 3}
+  timeWaitChangueSprite: 1
 --- !u!50 &825463997
 Rigidbody2D:
   serializedVersion: 5

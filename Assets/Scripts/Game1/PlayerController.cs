@@ -1,3 +1,4 @@
+using System.Collections;
 using Unity.Mathematics;
 using UnityEngine;
 namespace Game1
@@ -5,6 +6,8 @@ namespace Game1
     [RequireComponent (typeof (Rigidbody2D))]
     public class PlayerController : StartableEntity
     {
+        private SpriteRenderer spriteRenderer;
+
         [Header("Characteristics")]
         private Rigidbody2D rb;
         private float horizontal;
@@ -14,6 +17,11 @@ namespace Game1
         [Header("Limits")]
         [SerializeField] private Vector2 xLimit;
 
+        [Header("Sprite")]
+        [SerializeField]  private Sprite goodSprite;
+        [SerializeField]  private Sprite badSprite;
+        [SerializeField]  private Sprite neutralSprite;
+        [SerializeField]  private float timeWaitChangueSprite;
         private void Reset()
         {
             rb = GetComponent<Rigidbody2D>();
@@ -35,6 +43,7 @@ namespace Game1
         {
             rb = GetComponent<Rigidbody2D>();
             particleSyste = gameObject.GetComponent<ParticleSystem>();
+            spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
         }
         private void FixedUpdate()
         {
@@ -54,15 +63,46 @@ namespace Game1
         }
         private void OnTriggerEnter2D(Collider2D collision)
         {
+            
             if (collision.CompareTag("Good"))
             {
+                StopAllCoroutines();
+                
+                StartCoroutine(ChangueSprite(timeWaitChangueSprite));
+                
                 particleSyste.Play();
             }
+
+            if (collision.CompareTag("Bad"))
+            {
+                StopAllCoroutines();
+                StartCoroutine(ChangueSpriteBad(timeWaitChangueSprite));
+                
+            }
+
+
+
+        }
+
+        IEnumerator ChangueSprite(float time)
+        {
+            spriteRenderer.sprite = goodSprite;
+            yield return new WaitForSecondsRealtime(time);
+            spriteRenderer.sprite = neutralSprite;
+        }
+
+        IEnumerator ChangueSpriteBad(float time)
+        {
+            spriteRenderer.sprite = badSprite;
+            yield return new WaitForSecondsRealtime(time);
+            spriteRenderer.sprite = neutralSprite;
         }
         private void UpdateSpeed(float speed)
         {
             this.speed += speed;
         }
+
+
 
     }
 }

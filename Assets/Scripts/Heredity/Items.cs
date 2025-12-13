@@ -7,13 +7,13 @@ namespace Game1
     public abstract class Items : MonoBehaviour
     {
         public static event Action<int> OnScore;
-
         private Rigidbody2D rb;
         [SerializeField] private float speed;
         [Header("Audio")]
         [SerializeField] private AudioClipSO audioClipSO;
         [Header("Score")]
         [SerializeField] private int incrementScore;
+
         private void Reset()
         {
             rb = GetComponent<Rigidbody2D>();
