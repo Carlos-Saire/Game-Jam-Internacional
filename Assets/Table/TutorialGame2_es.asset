@@ -19,11 +19,11 @@ MonoBehaviour:
     m_Items: []
   m_TableData:
   - m_Id: 8057487360
-    m_Localized: 'Click derecho: Recoger caramelos / asustar fantasmas'
+    m_Localized: 'Click izquierdo: Recoger caramelos / asustar fantasmas'
     m_Metadata:
       m_Items: []
   - m_Id: 131831398400
-    m_Localized: 'Click izquierdo: Colocar caramelos dentro de la calabaza'
+    m_Localized: 'Click derecho: Colocar caramelos dentro de la calabaza'
     m_Metadata:
       m_Items: []
   - m_Id: 172616810496

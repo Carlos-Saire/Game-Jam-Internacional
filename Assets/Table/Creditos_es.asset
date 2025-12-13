@@ -19,16 +19,15 @@ MonoBehaviour:
     m_Items: []
   m_TableData:
   - m_Id: 62235312128
-    m_Localized: "Equipo: Chacalones Land\n\nIntegrantes: \n\n- Carlos Enrique Saire
-      Obreg\xF3n\n- Jorge Ra\xFAl Zu\xF1iga Garay\n- Lindy Greis Chipana Aliaga\n-
-      Alondra Alisson Rojas Araujo\n- Fabricio Antonio Velez Bazan\n- Victor Joaquin
-      Collazos Riqueros\n\nProgramaci\xF3n:  \n\n- Carlos Enrique Saire Obreg\xF3n\n-
-      Jorge Ra\xFAl Zu\xF1iga Garay\n- Victor Joaquin Collazos Riqueros\n- Fabricio
-      Antonio Velez Bazan\n\nArtista principal: \n\n- Lindy Greis Chipana Aliaga\n\nArtistas
-      asistentes: \n\n- Fabricio Antonio Velez Bazan \n- Victor Joaquin Collazos
-      Riqueros\n\nGame Designer: \n\n- Alondra Alisson Rojas Araujo\n\nActuaci\xF3n
-      de voz: \n\nRey Calabaza - Jorge Ra\xFAl Zu\xF1iga Garay \n                        
-      (Alias Hatchimba)"
+    m_Localized: "Equipo:  DreamOtherGames\n\nIntegrantes: \n\n- Carlos Enrique Saire
+      Obregon\n- Jorge Raul Zu\xF1iga Garay\n- Lindy Greis Chipana Aliaga\n- Alondra
+      Alisson Rojas Araujo\n- Fabricio Antonio Velez Bazan\n- Victor Joaquin Collazos
+      Riqueros\n\nProgramacion:  \n\n- Carlos Enrique Saire Obregon\n- Jorge Raul
+      Zu\xF1iga Garay\n- Victor Joaquin Collazos Riqueros\n- Fabricio Antonio Velez
+      Bazan\n\nArtista principal: \n\n- Lindy Greis Chipana Aliaga\n\nArtistas asistentes:
+      \n\n- Fabricio Antonio Velez Bazan \n- Victor Joaquin Collazos Riqueros\n\nGame
+      Designer: \n\n- Alondra Alisson Rojas Araujo\n\nActuaci\xF3n de voz: \n\nRey
+      Calabaza - Jorge Raul Zu\xF1iga Garay \n                         (Alias Hatchimba)"
     m_Metadata:
       m_Items: []
   references:
