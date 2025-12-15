@@ -1,5 +1,6 @@
-using UnityEngine;
+using System.Collections;
 using System.Collections.Generic;
+using UnityEngine;
 using Random = UnityEngine.Random;
 
 namespace Game1
@@ -13,21 +14,21 @@ namespace Game1
 
         [Header("Spawn Settings")]
         [SerializeField] private Vector2 xLimit;
-        [SerializeField] private float spawnInterval = 2f;
+        [SerializeField] private float spawnInterval = 2.5f;
 
         [Header("Spawn Chances")]
-        [SerializeField, Range(0f, 1f)] private float badObjectChance = 0.3f;
-        [SerializeField, Range(0f, 1f)] private float powerUpChance = 0.1f;
+        [SerializeField, Range(0f, 1f)] private float badObjectChance = 0.15f;
+        [SerializeField, Range(0f, 1f)] private float powerUpChance = 0.25f;
 
         [Header("Position Control")]
         [SerializeField] private int maxStoredPositions = 3;
         [SerializeField] private float minDistance = 0.5f;
 
         [Header("Difficulty Settings")]
-        [SerializeField] private float difficultyIncreaseRate = 0.05f; 
-        [SerializeField] private float minSpawnInterval = 0.5f;        
-        [SerializeField] private float maxBadChance = 0.8f;           
-        [SerializeField] private float minPowerUpChance = 0.02f;       
+        [SerializeField] private float difficultyIncreaseRate = 0.03f; 
+        [SerializeField] private float minSpawnInterval = 1.8f;        
+        [SerializeField] private float maxBadChance = 0.35f;           
+        [SerializeField] private float minPowerUpChance = 0.15f;       
 
         private List<Vector2> recentPositions = new List<Vector2>();
         private bool firstSpawnDone = false;
@@ -36,10 +37,19 @@ namespace Game1
         protected override void StartGame()
         {
             base.StartGame();
-            InvokeRepeating(nameof(IncreaseDifficulty), 5f, 5f); 
-            Generate();
+            StartCoroutine(SpawnLoop());
+            InvokeRepeating(nameof(IncreaseDifficulty), 10f, 10f); 
+            
         }
 
+        private IEnumerator SpawnLoop()
+        {
+            while (true)
+            {
+                SpawnOnce();
+                yield return new WaitForSeconds(spawnInterval);
+            }
+        }
         private void Generate()
         {
             Transform prefabToSpawn = GetRandomPrefab();
@@ -47,6 +57,14 @@ namespace Game1
 
             Invoke(nameof(Generate), spawnInterval);
         }
+
+
+        private void SpawnOnce()
+        {
+            Transform prefab = GetRandomPrefab();
+            Instantiate(prefab, GetRandomPosition(), transform.rotation);
+        }
+
 
         private Transform GetRandomPrefab()
         {
@@ -104,10 +122,20 @@ namespace Game1
         {
             difficultyMultiplier += difficultyIncreaseRate;
 
-            spawnInterval = Mathf.Max(spawnInterval - 0.1f * difficultyMultiplier, minSpawnInterval);
+            spawnInterval = Mathf.Max(
+                spawnInterval - 0.05f * difficultyMultiplier,
+                minSpawnInterval
+            );
 
-            badObjectChance = Mathf.Min(badObjectChance + 0.02f * difficultyMultiplier, maxBadChance);
-            powerUpChance = Mathf.Max(powerUpChance - 0.01f * difficultyMultiplier, minPowerUpChance);
+            badObjectChance = Mathf.Min(
+                badObjectChance + 0.01f * difficultyMultiplier,
+                maxBadChance
+            );
+
+            powerUpChance = Mathf.Max(
+                powerUpChance - 0.005f * difficultyMultiplier,
+                minPowerUpChance
+            );
         }
     }
 }
