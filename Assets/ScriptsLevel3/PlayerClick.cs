@@ -1,12 +1,13 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
-namespace Game3 
+
+namespace Game3
 {
     public class PlayerClick : MonoBehaviour
     {
         void Update()
         {
-            if (Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame)
+            if (Pointer.current != null && Pointer.current.press.wasPressedThisFrame)
             {
                 DetectClick();
             }
@@ -14,9 +15,9 @@ namespace Game3
 
         private void DetectClick()
         {
-            Vector2 mousePos = Mouse.current.position.ReadValue();
+            Vector2 pointerPos = Pointer.current.position.ReadValue();
 
-            Ray ray = Camera.main.ScreenPointToRay(mousePos);
+            Ray ray = Camera.main.ScreenPointToRay(pointerPos);
             RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction);
 
             if (hit.collider != null)

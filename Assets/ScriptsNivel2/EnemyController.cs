@@ -36,10 +36,14 @@ public class EnemyController : StartableEntity, IAuditable
 
     private Vector2 PositionToMove; // destino en vector2
 
+    private Vector2 mousePosition;
+
+
     private void Awake()
     {
         _compRigidbody2D = GetComponent<Rigidbody2D>();
         sprite = GetComponent<SpriteRenderer>();
+
     }
 
     private void Start()
@@ -54,12 +58,20 @@ public class EnemyController : StartableEntity, IAuditable
     {
         base.OnEnable();
         InputReader.OnClickLeft += ScaryGhost;
+        InputReader.OnPostion += HandlePosition;
+
     }
 
+   
     protected override void OnDisable()
     {
         base.OnDisable();
         InputReader.OnClickLeft -= ScaryGhost;
+        InputReader.OnPostion -= HandlePosition;
+    }
+    private void HandlePosition(Vector2 vector)
+    {
+        mousePosition = vector;
     }
 
     private void Update()
@@ -137,7 +149,7 @@ public class EnemyController : StartableEntity, IAuditable
 
     void ScaryGhost()
     {
-        Vector2 mousePos = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
+        Vector2 mousePos = Camera.main.ScreenToWorldPoint(mousePosition);
         RaycastHit2D hit = Physics2D.Raycast(mousePos, Vector2.zero);
 
         if (hit.collider != null && hit.collider.CompareTag("Ghost"))

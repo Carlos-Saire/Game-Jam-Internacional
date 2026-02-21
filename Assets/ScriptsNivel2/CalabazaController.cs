@@ -10,20 +10,27 @@ public class CalabazaController : MonoBehaviour, IAuditable
     [SerializeField] private AudioClipSO audioEffectHave;
     [SerializeField] private AudioClipSO audioEffectHavent;
 
+    private Vector2 mousePosition;
     private void OnEnable()
     {
         InputReader.OnClickRight += GetCandys;
+        InputReader.OnPostion += HandlePosition;
         CandyController.OnExistCandys += SetValueExistsCandies;
     }
 
     private void OnDisable()
     {
         InputReader.OnClickRight -= GetCandys;
+        InputReader.OnPostion -= HandlePosition;
         CandyController.OnExistCandys -= SetValueExistsCandies;
+    }
+    private void HandlePosition(Vector2 vector)
+    {
+        mousePosition = vector;
     }
     void GetCandys()
     {
-        Vector2 mousePos = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
+        Vector2 mousePos = Camera.main.ScreenToWorldPoint(mousePosition);
         RaycastHit2D hit = Physics2D.Raycast(mousePos, Vector2.zero);
 
         if (hit.collider != null && hit.collider.CompareTag("Calabaza"))

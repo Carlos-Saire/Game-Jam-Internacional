@@ -158,7 +158,7 @@ public class UIManager : MonoBehaviour
     }
     private void Explain()
     {
-        loadSceneManager.LoadScene(scene);
+        loadSceneManager.LoadScene("Nivel2");
     }
     private void CheckWin(bool value)
     {

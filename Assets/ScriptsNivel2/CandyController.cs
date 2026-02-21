@@ -13,10 +13,13 @@ public class CandyController : StartableEntity, IAuditable
     [SerializeField] private int maxCandys;
     [SerializeField] private AudioClipSO audioEffect;
     [SerializeField] private AudioClipSO inventoryFull;
+
+    private Vector2 mousePosition;
     protected override  void OnEnable()
     {
         base.OnEnable();
         InputReader.OnClickLeft += DropCandy;
+        InputReader.OnPostion += HandlePosition;
         CalabazaController.OnGetCandys += SetCandy;
     }
 
@@ -24,13 +27,20 @@ public class CandyController : StartableEntity, IAuditable
     {
         base.OnDisable();
         InputReader.OnClickLeft -= DropCandy;
+        InputReader.OnPostion -= HandlePosition;
         CalabazaController.OnGetCandys -= SetCandy;
     }
+
+    private void HandlePosition(Vector2 vector)
+    {
+        mousePosition = vector;
+    }
+
     void DropCandy()
     {
         if(!isStartGame) return;
 
-        Vector2 mousePos = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
+        Vector2 mousePos = Camera.main.ScreenToWorldPoint(mousePosition);
         RaycastHit2D hit = Physics2D.Raycast(mousePos, Vector2.zero);
 
 

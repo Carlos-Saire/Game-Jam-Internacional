@@ -15,8 +15,8 @@ public class MenuManager : MonoBehaviour
 
 
     [Header("Title")]
-    [SerializeField] private Transform title;
-    [SerializeField] private Transform target;
+    [SerializeField] private RectTransform title;
+    [SerializeField] private RectTransform target;
 
     [Header("MoveTitle")]
     [SerializeField] private Ease Ease;

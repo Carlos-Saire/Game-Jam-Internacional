@@ -5,10 +5,6 @@ using UnityEngine.Localization.Settings;
 using UnityEngine.Localization.Tables;
 using System;
 using System.Collections.Generic;
-using UnityEngine.Events;
-using System.Net.NetworkInformation;
-using UnityEditor;
-using System.Runtime.CompilerServices;
 
 public class DialogueController : MonoBehaviour
 {

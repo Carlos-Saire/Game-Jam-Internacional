@@ -6,6 +6,7 @@ public class InputReader : MonoBehaviour
 {
     public static event Action OnClickLeft;
     public static event Action OnClickRight;
+    public static event Action<Vector2> OnPostion;
 
 
     public void ClickLeft(InputAction.CallbackContext context)
@@ -14,6 +15,7 @@ public class InputReader : MonoBehaviour
         {
 
             OnClickLeft?.Invoke();
+            Debug.Log("Click");
         }
        
     }
@@ -23,9 +25,13 @@ public class InputReader : MonoBehaviour
     {
         if(InputActionPhase.Performed == context.phase)
         {
-
+            Debug.Log("Click");
             OnClickRight?.Invoke();
         }
         
+    }
+    public void Position(InputAction.CallbackContext context)
+    {
+        OnPostion?.Invoke(context.ReadValue<Vector2>());
     }
 }
