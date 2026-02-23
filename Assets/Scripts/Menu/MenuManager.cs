@@ -61,6 +61,9 @@ public class MenuManager : MonoBehaviour
     }
     private void Start()
     {
+#if UNITY_ANDROID
+        Application.targetFrameRate = 60;
+#endif
         buttonContinue.interactable = GameManager.instance.CountSweet > 0;
         MoveTitle();
     }
