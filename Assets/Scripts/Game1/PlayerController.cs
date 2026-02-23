@@ -13,9 +13,11 @@ namespace Game1
         private float horizontal;
         [SerializeField] private float speed;
         private ParticleSystem particleSyste;
+        private Camera cam;
 
         [Header("Limits")]
         [SerializeField] private Vector2 xLimit;
+        [SerializeField] private float screenOffset = 0.2f;
 
         [Header("Sprite")]
         [SerializeField]  private Sprite goodSprite;
@@ -41,6 +43,7 @@ namespace Game1
         }
         private void Awake()
         {
+            cam = Camera.main;
             rb = GetComponent<Rigidbody2D>();
             particleSyste = gameObject.GetComponent<ParticleSystem>();
             spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
@@ -55,7 +58,17 @@ namespace Game1
         {
             if (!isStartGame) return;
 
-            transform.position=new Vector2(Mathf.Clamp(transform.position.x, xLimit.x, xLimit.y),transform.position.y);
+            float halfWidth = cam.orthographicSize * cam.aspect;
+
+            float playerHalfSize = spriteRenderer.bounds.extents.x;
+
+            float leftLimit = -halfWidth + playerHalfSize + screenOffset;
+            float rightLimit = halfWidth - playerHalfSize - screenOffset;
+
+            transform.position = new Vector2(
+                Mathf.Clamp(transform.position.x, leftLimit, rightLimit),
+                transform.position.y
+            );
         }
         private void Horizontal(float horizontal)
         {

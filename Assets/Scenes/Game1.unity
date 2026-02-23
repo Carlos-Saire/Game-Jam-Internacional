@@ -1643,10 +1643,10 @@ MonoBehaviour:
   powerUps:
   - {fileID: 8913549467563818172, guid: 9e581e1b319e2724fb0bf03d414a5284, type: 3}
   - {fileID: 7537779123476154039, guid: a7d46b93b04820449a00421b44d23a4d, type: 3}
-  xLimit: {x: -8, y: 8}
   spawnInterval: 1.2
   badObjectChance: 0.3
   powerUpChance: 0.15
+  screenOffset: 0.3
   maxStoredPositions: 3
   minDistance: 0.5
   difficultyIncreaseRate: 0.03
@@ -3023,7 +3023,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2848856860318296675, guid: a31e13fcdf7f22349b59843dfc9a75cb, type: 3}
       propertyPath: m_fontSize
-      value: 72
+      value: 53.25
       objectReference: {fileID: 0}
     - target: {fileID: 3572957446391628228, guid: a31e13fcdf7f22349b59843dfc9a75cb, type: 3}
       propertyPath: m_IsActive
@@ -3055,7 +3055,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4682723529352451504, guid: a31e13fcdf7f22349b59843dfc9a75cb, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7380155856790679681, guid: a31e13fcdf7f22349b59843dfc9a75cb, type: 3}
       propertyPath: m_IsActive
@@ -3284,6 +3284,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 4
   xLimit: {x: -8, y: 8}
+  screenOffset: 0.2
   goodSprite: {fileID: -5518026781542679504, guid: 3b54e1b4d7b62034db80462e47f7adca, type: 3}
   badSprite: {fileID: 3199710391044083888, guid: 1fffacf048edb1040a71d6c65a1464a7, type: 3}
   neutralSprite: {fileID: -9100105516475449204, guid: 84f59feda19e842498d00edc71d4d0e3, type: 3}
@@ -10324,7 +10325,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
-  m_NotificationBehavior: 2
+  m_NotificationBehavior: 3
   m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:
     m_PersistentCalls:
@@ -10436,6 +10437,15 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: b152a960-02c6-4e6f-8760-ae60cce470ba
     m_ActionName: 'Nivel2/Position[/Mouse/position,/Pen/position]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 89ca448f-65d8-4269-80a8-e6c40206bf22
+    m_ActionName: 'Player/Touch[/Device Simulator Touchscreen/touch0/press,/Device
+      Simulator Touchscreen/touch1/press,/Device Simulator Touchscreen/touch2/press,/Device
+      Simulator Touchscreen/touch3/press,/Device Simulator Touchscreen/touch4/press,/Device
+      Simulator Touchscreen/touch5/press,/Device Simulator Touchscreen/touch6/press,/Device
+      Simulator Touchscreen/touch7/press,/Device Simulator Touchscreen/touch8/press,/Device
+      Simulator Touchscreen/touch9/press]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -11123,7 +11133,6 @@ GameObject:
   - component: {fileID: 2143143020}
   - component: {fileID: 2143143019}
   - component: {fileID: 2143143022}
-  - component: {fileID: 2143143023}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -11174,7 +11183,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 6.666666
+  orthographic size: 5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -11249,19 +11258,6 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
---- !u!114 &2143143023
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2143143018}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe8ef61a170f8e243bafec173c2957d8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CameraFitter
-  baseOrthographicSize: 5
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

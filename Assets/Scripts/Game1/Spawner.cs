@@ -13,33 +13,52 @@ namespace Game1
         [SerializeField] private Transform[] powerUps;
 
         [Header("Spawn Settings")]
-        [SerializeField] private Vector2 xLimit;
         [SerializeField] private float spawnInterval = 2.5f;
 
         [Header("Spawn Chances")]
         [SerializeField, Range(0f, 1f)] private float badObjectChance = 0.15f;
         [SerializeField, Range(0f, 1f)] private float powerUpChance = 0.25f;
 
+        [Header("Screen Offset")]
+        [SerializeField] private float screenOffset = 0.3f;
+
         [Header("Position Control")]
         [SerializeField] private int maxStoredPositions = 3;
         [SerializeField] private float minDistance = 0.5f;
 
         [Header("Difficulty Settings")]
-        [SerializeField] private float difficultyIncreaseRate = 0.03f; 
-        [SerializeField] private float minSpawnInterval = 1.8f;        
-        [SerializeField] private float maxBadChance = 0.35f;           
-        [SerializeField] private float minPowerUpChance = 0.15f;       
+        [SerializeField] private float difficultyIncreaseRate = 0.03f;
+        [SerializeField] private float minSpawnInterval = 1.8f;
+        [SerializeField] private float maxBadChance = 0.35f;
+        [SerializeField] private float minPowerUpChance = 0.15f;
 
         private List<Vector2> recentPositions = new List<Vector2>();
         private bool firstSpawnDone = false;
         private float difficultyMultiplier = 1f;
 
+        private Camera cam;
+        private float leftLimit;
+        private float rightLimit;
+
+        private void Awake()
+        {
+            cam = Camera.main;
+            CalculateScreenLimits();
+        }
+
         protected override void StartGame()
         {
             base.StartGame();
             StartCoroutine(SpawnLoop());
-            InvokeRepeating(nameof(IncreaseDifficulty), 10f, 10f); 
-            
+            InvokeRepeating(nameof(IncreaseDifficulty), 10f, 10f);
+        }
+
+        private void CalculateScreenLimits()
+        {
+            float halfWidth = cam.orthographicSize * cam.aspect;
+
+            leftLimit = -halfWidth + screenOffset;
+            rightLimit = halfWidth - screenOffset;
         }
 
         private IEnumerator SpawnLoop()
@@ -50,21 +69,12 @@ namespace Game1
                 yield return new WaitForSeconds(spawnInterval);
             }
         }
-        private void Generate()
-        {
-            Transform prefabToSpawn = GetRandomPrefab();
-            Instantiate(prefabToSpawn, GetRandomPosition(), transform.rotation);
-
-            Invoke(nameof(Generate), spawnInterval);
-        }
-
 
         private void SpawnOnce()
         {
             Transform prefab = GetRandomPrefab();
             Instantiate(prefab, GetRandomPosition(), transform.rotation);
         }
-
 
         private Transform GetRandomPrefab()
         {
@@ -92,9 +102,10 @@ namespace Game1
             const int maxAttempts = 10;
 
             Vector2 newPos;
+
             do
             {
-                randomX = Random.Range(xLimit.x, xLimit.y);
+                randomX = Random.Range(leftLimit, rightLimit);
                 newPos = new Vector2(randomX, transform.position.y);
                 attempts++;
             }
